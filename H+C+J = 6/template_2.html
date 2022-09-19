@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="template_2css.css">
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!--icon-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Kasper | Template Two</title>
+</head>
+<body>
+    <!-- Start Header -->
+        <header>
+            <div class="container">
+                <a href="#" class="logo">
+                    <img src="logo (1).png" alt="">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">home</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#">portfolio</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                    <div class="bars"></div>
+                    <div class="search">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </div>
+                </nav>
+                
+            </div>
+        </header>
+        <script>
+            let bars = document.querySelector(".bars"),
+                ul = document.querySelector("ul");
+
+                bars.onclick = function(){
+                    bars.classList.toggle("active");
+                    ul.classList.toggle("active");
+                }
+        </script>
+    <!-- End Header -->
+    <!-- Start Landing -->
+        <div class="landing">
+            <div class="container">
+                <div class="text">
+                    <h1>Hello World! <br>We Are Kasper We Make Art.</h1>
+                    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+                </div>
+            </div>
+        </div>
+    <!-- End Landing -->
+    <!-- Start Services -->
+        <div class="services">
+            <div class="container">
+                <div class="main-heading">
+                    <h2>services</h2>
+                    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+                </div>
+                <div class="services-container">
+                    <div class="ser-box">
+                        <ion-icon name="laptop-outline"></ion-icon>
+                        <div class="text">
+                            <h3>laptop</h3>
+                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
+                        </div>
+                    </div>
+                    <div class="ser-box">
+                        <ion-icon name="settings-outline"></ion-icon>
+                        <div class="text">
+                            <h3>settings</h3>
+                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
+                        </div>
+                    </div>
+                    <div class="ser-box">
+                        <ion-icon name="folder-open-outline"></ion-icon>
+                        <div class="text">
+                            <h3>folder</h3>
+                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
+                        </div>
+                    </div>
+                    <div class="ser-box">
+                        <ion-icon name="airplane-outline"></ion-icon>
+                        <div class="text">
+                            <h3>airplane</h3>
+                            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <!-- End Services -->
+     <!-- Start Design -->
+        <div class="design">
+                <div class="image">
+                    <img src="mobile.png" alt="">
+                </div>
+                <div class="text">
+                        <h2>OUR DESIGN COMES WITH...</h2>
+                        <ul>
+                        
+                            <li> <ion-icon name="laptop-outline"></ion-icon> Responsive Design</li>
+                            <li> <ion-icon name="laptop-outline"></ion-icon> Responsive Design</li>
+                            <li> <ion-icon name="laptop-outline"></ion-icon> Responsive Design</li>
+                            <li> <ion-icon name="laptop-outline"></ion-icon> Responsive Design</li>
+                        </ul>
+                </div>
+        </div>
+     <!-- End Design -->
+     <!-- Start protfolio -->
+        <div class="protfolio">
+
+            <div class="container">
+                <div class="main-heading">
+                    <h2>protfolio</h2>
+                    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+                </div>
+                <div class="shuffle">
+                    <ul>
+                        <li class="active">all</li>
+                        <li>app</li>
+                        <li>photo</li>
+                        <li>web</li>
+                        <li>print</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="imgs-container">
+                <div class="box"><!-- img (1) -->
+                    <img src="shuffle-01.jpg" alt="">
+                    <div class="caption">
+                        <h4>Awesome Image</h4>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="box"><!-- img (2) -->
+                    <img src="shuffle-02.jpg" alt="">
+                    <div class="caption">
+                        <h4>Awesome Image</h4>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="box"><!-- img (3) -->
+                    <img src="shuffle-03.jpg" alt="">
+                    <div class="caption">
+                        <h4>Awesome Image</h4>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="box"><!-- img (4) -->
+                    <img src="shuffle-04.jpg" alt="">
+                    <div class="caption">
+                        <h4>Awesome Image</h4>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="box"><!-- img (5) -->
+                    <img src="shuffle-05.jpg" alt="">
+                    <div class="caption">
+                        <h4>Awesome Image</h4>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="box"><!-- img (6) -->
+                    <img src="shuffle-06.jpg" alt="">
+                    <div class="caption">
+                        <h4>Awesome Image</h4>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="box"><!-- img (7) -->
+                    <img src="shuffle-07.jpg" alt="">
+                    <div class="caption">
+                        <h4>Awesome Image</h4>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="box"><!-- img (8) -->
+                    <img src="shuffle-08.jpg" alt="">
+                    <div class="caption">
+                        <h4>Awesome Image</h4>
+                        <p>Photography</p>
+                    </div>
+                </div> 
+                
+                <a href="#" class="more">more</a>
+            </div>
+        </div>
+    <!-- End protfolio -->
+    <!-- Start About -->
+        <div class="about">
+            <div class="container">
+                <div class="main-heading">
+                    <h2>about</h2>
+                    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+                </div>
+                <img src="about.png" alt="">
+            </div>
+        </div>
+    <!-- End About -->
+
+    <!-- Start Stats -->
+    <div class="stats">
+        <dvi class="st-container">
+            <div class="box">
+                <ion-icon name="cafe-outline"></ion-icon>
+                <div class="number">1.236</div>
+                <p>coffee drink</p>
+            </div>
+            <div class="box">
+                <ion-icon name="folder-outline"></ion-icon>
+                <div class="number">256</div>
+                <p>completed projects</p>
+            </div>
+            <div class="box">
+                <ion-icon name="mail-outline"></ion-icon>
+                <div class="number">1.743</div>
+                <p>mail send</p>
+            </div>
+            <div class="box">
+                <ion-icon name="trophy-outline"></ion-icon>
+                <div class="number">12</div>
+                <p>awards received</p>
+            </div>
+        </dvi>
+    </div>
+    <!-- End Start -->
+    <!--Start Skills-->
+    <div class="our-skills">
+        <div class="container">
+                <h3>TESTIMONIALS</h3>
+                <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+                <div class="skil-container">
+                    <div class="content">
+                    <img src="skills-01.jpg" alt="">
+                    <div class="text">
+                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+                        <p>John Doe, CEO</p>
+                    </div>
+                    </div>
+                    <div class="content">
+                        <img src="skills-02.jpg" alt="">
+                        <div class="text">
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+                            <p>John Doe, CEO</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <img src="skills-03.jfif" alt="">
+                        <div class="text">
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+                            <p>John Doe, CEO</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <img src="skills-03.jfif" alt="">
+                        <div class="text">
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+                            <p>John Doe, CEO</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <img src="skills-01.jpg" alt="">
+                        <div class="text">
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+                            <p>John Doe, CEO</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <img src="skills-02.jpg" alt="">
+                        <div class="text">
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+                            <p>John Doe, CEO</p>
+                        </div>
+                    </div>
+                </div>  
+        </div>
+    </div>
+    <!--Start Skills-->
+    <!-- Start contact us-->
+    <div class="contact">
+        <div class="container">
+            <div class="main-heading">
+                <h2>contact us</h2>
+                <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+            </div>
+            <div class="tact-container">
+                <form action="#" class="content">
+                    <div class="inputBox">
+                        <input type="text" placeholder="Enter Your Name">
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" placeholder="Enter Your Email">
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="" id="" cols="50" rows="10"  placeholder="Enter Your Message"></textarea>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="send message">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End contact us-->
+    <!--Start Footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="foot-container">
+                <div class="col">
+                    <h3>company</h3>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>get help</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>online shop</h3>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shose</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>follow us</h3>
+                    <ul>
+                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Footer-->
+</body>
+</html>
