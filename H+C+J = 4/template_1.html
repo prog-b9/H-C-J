@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="template_1CSS.css"><!--Main folder CSS-->
+    <link rel="stylesheet" href="normalize.css"><!--Render All Elements Normalize-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <title>Template_1</title>
+</head>
+    
+<body>
+    <!-- Start Header -->
+    <header>
+        <div class="container">
+            <img class="logo" src="logo.png" alt="">
+            <nav>
+                <div class="bars"></div>
+                <ul>
+                    <li><a href="#landing">home</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#protfolio">protfolio</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>  
+    <script>
+        let bars =document.querySelector(".bars");
+        let ul =document.querySelector("ul");
+        bars.onclick = function(){
+            bars.classList.toggle("active");
+            ul.classList.toggle("active");
+        }
+    </script> 
+    <!-- End Header -->
+   
+    <!-- Start Lnding -->
+    
+    <div id="landing">
+        <div class="container">
+            <h1>hello there</h1>
+            <p>We are Leon - Super Creative & <br> Minimal Agency Web Template</p>
+        </div>
+    </div>
+      
+    <!-- End Lnding -->
+
+    <!-- Start Features -->
+        <div id="features">
+            <div class="container">
+
+                <div class="feat">
+                    <ion-icon name="magnet-outline"></ion-icon>
+                    <h3>tell us your  idea</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam sapiente odio sunt id.</p>
+                </div>
+
+                <div class="feat">
+                    <ion-icon name="magnet-outline"></ion-icon>
+                    <h3>We Will Do All the work</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam sapiente odio sunt id.</p>
+                </div>
+
+                <div class="feat">
+                    <ion-icon name="magnet-outline"></ion-icon>
+                    <h3>Your Product is Worldwide</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam sapiente odio sunt id.</p>
+                </div>
+
+            </div>
+        </div>
+    <!-- End Features --> 
+
+    <!-- Start Services -->
+    <div id="services">
+        <div class="container">
+                <h2 class="special-heading">services</h2>
+                <p>Don't be busy, be productive</p>
+        </div> 
+            <div class="in-container">
+                <div class="column">
+                    <div class="serv">
+              
+                        <ion-icon name="color-palette-outline"></ion-icon>
+                            <h3>Graphic Design</h3>
+                            <p>Graphic design is the process of visual communication and problem-solving using one or more of typography, photography and illustration.</p>
+                        
+                    </div>
+                    <div class="serv">
+                        
+                       <ion-icon name="magnet-outline"></ion-icon>
+                            <h3>magnet</h3>
+                            <p>Graphic design is the process of visual communication and problem-solving using one or more of typography, photography and illustration.</p>
+                     
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="serv">
+                     
+                        <ion-icon name="hourglass-outline"></ion-icon>
+                            <h3>hourglass</h3>
+                            <p>Graphic design is the process of visual communication and problem-solving using one or more of typography, photography and illustration.</p>
+                        
+                    </div>
+                    <div class="serv">
+                        
+                        <ion-icon name="location-outline"></ion-icon>
+                            <h3>location</h3>
+                            <p>Graphic design is the process of visual communication and problem-solving using one or more of typography, photography and illustration.</p>
+                        
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="image">
+                        <img src="arnaud-mariat-Ft-_A3gANxo-unsplash.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- End Services -->
+
+    <!-- Start Protfolio -->
+    <div id="protfolio">  
+
+            <h2 class="special-heading">Protfolio</h2>
+            <p>If you do it right, it will last forever.</p>
+
+            <div class="container">
+
+                <div class="column">
+                    <img src="portfolio-1.jpg" alt="">
+                    <div class="text">
+                        <h3>Project Here</h3>
+                        <p>My creative ability is very difficult to measure because it can manifest in so many surprising and.</p>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <img src="portfolio-2.jpg" alt="">
+                    <div class="text">
+                        <h3>Project Team</h3>
+                        <p>My creative ability is very difficult to measure because it can manifest in so many surprising and.</p>
+                    </div>                
+                </div>
+
+                <div class="column">
+                    <img src="portfolio-3.jpg" alt="">
+                    <div class="text">
+                        <h3>Project Here</h3>
+                        <p>My creative ability is very difficult to measure because it can manifest in so many surprising and.</p>
+                    </div>               
+                </div>
+            </div>
+
+    </div>
+
+    <!-- End Protfolio -->
+
+    <!-- Start contact -->
+     <div id="contact">
+        <h2 class="special-heading">Contact</h2>
+        <p>We are born to create</p>
+
+        <div class="container">
+
+                <div class="col"> <!--Column one-->
+                    <div class="info">
+                        <div class="icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+                        <div class="text">
+                            <h4>address</h4>
+                            <p>I'm In Saudi Arabia</p>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <div class="icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+                        <div class="text">
+                            <h4>phone</h4>
+                            <p>053 043 5697</p>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <div class="icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+                        <div class="text">
+                            <h4>email</h4>
+                            <p>prog.b9@gmail.com</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col"><!--Column two-->
+                    <form>
+                        <h1>send message</h1>
+                        <div class="inputBox">
+                            <input type="text" required="required" id="contact-fname" onkeyup="validateFName()"> <span class="error-fname"></span> 
+                            <label>first name</label>
+                            <span class="line"></span>
+                        </div>
+
+                        <div class="inputBox">
+                            <input type="text" required="required" id="contact-lname" onkeyup="validateLName()"> <span class="error-lname"></span> 
+                            <label>last name</label>
+                            <span class="line"></span>
+                        </div>
+
+                        <div class="inputBox">
+                            <input type="text" required="required" id="contact-email" onkeyup="validateEmail()"> <span class="error-email"></span> 
+                            <label>email</label>
+                            <span class="line"></span>
+                        </div>
+
+                        <div class="inputBox">
+                            <input type="text" required="required" id="contact-message" onkeyup="validateMessage()"> <span class="error-message"></span> 
+                            <label>the message</label>
+                            <span class="line"></span>
+                        </div>
+
+                        <div class="inputBox">
+                            <button onclick="validateSubmit()">send</button>
+                            <span class="error-submit"></span>
+                        </div>
+                    </form>
+                </div>
+        </div>
+    </div> 
+
+    <script>
+        let errorFName = document.querySelector(".error-fname");
+        let errorLName = document.querySelector(".error-lname");
+        let errorEmail = document.querySelector(".error-email");
+        let errorMessage = document.querySelector(".error-message");
+        let errorSubmit = document.querySelector(".error-submit");
+
+        function validateFName(){
+            let fname = document.getElementById("contact-fname").value;
+            if (fname.length == 0) {
+                errorFName.innerHTML = "write last name";
+                return false;
+            }
+            if (fname.length < 3) {
+                errorFName.innerHTML = "write char 3 more";
+                return false;
+            }else{
+
+                errorFName.innerHTML = '<ion-icon name="checkmark-circle" style="color:green;font-size:17px;"></ion-icon>';
+                return true;
+            }
+
+        }
+
+        function validateLName(){
+            let lname = document.getElementById("contact-lname").value;
+            if (lname.length == 0) {
+                errorLName.innerHTML = "write first name";
+                return false;
+            }
+            if (lname.length < 3) {
+                errorLName.innerHTML = "write char 3 more";
+                return false;
+            }else{
+
+                errorLName.innerHTML = '<ion-icon name="checkmark-circle" style="color:green;font-size:17px;"></ion-icon>';
+                return true;
+            }
+
+        }
+        function validateEmail(){
+            let email = document.getElementById("contact-email").value;
+
+            var check_email = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+            if(email.length == 0)
+            {
+                errorEmail.innerHTML = "Email is required";
+                return false;
+            }
+            if(!check_email.test(email))
+            {
+                errorEmail.innerHTML = "Ex: z@z.zz";
+                return false;
+            }
+            if(email.length >= 5)
+            {
+                errorEmail.innerHTML = '<ion-icon name="checkmark-circle" style="color:green;font-size:17px;"></ion-icon>';
+                return true;
+            }
+        }
+
+        function validateMessage(){
+            let message = document.getElementById("contact-message").value;
+            if (message.length == 0) {
+                errorMessage.innerHTML = "write your message";
+                return false;
+            }
+            if (message.length > 0) {
+                errorMessage.innerHTML = '<ion-icon name="checkmark-circle" style="color:green;font-size:17px;"></ion-icon>';
+                return true;
+            }
+        }
+        
+        function validateSubmit(){
+            if (!validateFName() || !validateLName() ||!validateEmail() ||!validateMessage()) {
+                errorSubmit.innerHTML = "Please Enter Data";
+                return false;
+            }else{
+                errorSubmit.style = "color:green";
+                errorSubmit.innerHTML = "your message done send";
+                return true;
+            }
+            
+        }
+
+
+    </script>
+
+    <!-- End contact -->
+
+    <div id="footer">
+        <div class="container">
+                <div class="col">
+                    <h3>useful links</h3>
+                    <nav>
+                        <ul>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">services</a></li>
+                            <li><a href="#">protfolio</a></li>
+                            <li><a href="#">contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+    
+                <div class="col">
+                    <h3>newsletter</h3>
+                    <input type="text" placeholder="Your Email Address">
+                    <button>subscribe now</button>
+                </div>
+    
+                <div class="col">
+                    <h3>contact</h3>
+                    <p>123, xyz road bks 3 <br> bangalare karnataka,in</p>
+                    <nav>
+                        <ul>
+                            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="mail"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
+                        </ul>
+                    </nav>
+                </div>
+    
+            </div>
+    </div>
+
+
+
+</body>
+</html>
