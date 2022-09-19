@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="websiteTypingCSS.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script><!--Icons-->
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script></script><!--Icons-->
+    <title>Website Typing</title>
+</head>
+<body>
+    <header>
+        <img src="Basil-designstyle-smoothie-m.png" alt="">
+        <nav>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#contact">contact</a></li>
+                <li><a href="#footer">footer</a></li>
+            </ul>
+        </nav>
+        <div class="bars"></div>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <h1>I'm <span id="typ"></span></h1>
+            <p>You can reach out to me i you need ony help in making a website for you or your business</p>
+            
+            <div class="account">
+                <a href="#">sign in</a>
+                <a href="#">sign out</a>
+            </div>
+        </div>     
+    </section>
+
+    <script>
+        let bars = document.querySelector(".bars"),
+            ul = document.querySelector("ul");
+
+
+        bars.onclick = function(){
+            bars.classList.toggle("active");
+            ul.classList.toggle("active");
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script><!--For the typing-->
+    <script>
+        let typed = new Typed("#typ",{// typ (this is element (line: 26 (span) ) )
+            strings: ["Basil Al-Qahtani","Web Developer","UI Designer"],
+            typeSpeed: 80, // سرعة ادهاب 
+            backSpeed: 80,// سرعة عودة الكلام 
+            loop: true
+        })
+    </script>
+    
+    
+    <section id="about"> <!-- for about Photo (H + C + JS)-->
+        <div class="card">
+            <div> <!-- HTML -->
+                <div class="circle h">HTML</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas est autem ea distinctio atque deleniti mollitia animi sint quo eum error explicabo eaque, aspernatur at tenetur sequi iusto, saepe velit.</p>
+            </div>
+
+            <div><!-- CSS -->
+                <div class="circle c">CSS</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas est autem ea distinctio atque deleniti mollitia animi sint quo eum error explicabo eaque, aspernatur at tenetur sequi iusto, saepe velit.</p>
+            </div>
+
+            <div><!-- JavaScript -->
+                <div class="circle js">JS</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas est autem ea distinctio atque deleniti mollitia animi sint quo eum error explicabo eaque, aspernatur at tenetur sequi iusto, saepe velit.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <form action="#" method="POST">
+                <div class="logo">
+                    <ion-icon name="mail-unread-outline"></ion-icon>
+                </div>
+                
+                <div class="input-group">
+                    <label>full name</label>
+                    <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+                    <span id="name-error"></span>
+                </div>
+
+                <div class="input-group">
+                    <label>phone no</label>
+                    <input type="number" placeholder="123 456 7890" id="contact-phone" onkeyup="validatePhone()">
+                    <span id="phone-error"></span>
+                </div>
+
+                <div class="input-group">
+                    <label>email</label>
+                    <input type="email" placeholder="Enter email" id="contact-email" onkeyup="validateEmail()">
+                    <span id="email-error"></span>
+                </div>
+
+                <div class="input-group">
+                    <label>your message</label>
+                    <textarea name=""  rows="3" placeholder="Enter your message" id="contact-message" onkeyup="validateMessage()"></textarea>
+                    <span id="message-error"></span>
+                </div>
+
+                <input type="submit" onclick="return validateForm()">
+                <span id="submit-error"></span>
+
+            </form>
+        </div>
+    </section>
+
+    <script>
+        var nameError = document.getElementById("name-error");
+        var phoneError = document.getElementById("phone-error");
+        var emailError = document.getElementById("email-error");
+        var messageError = document.getElementById("message-error");
+        var submitError = document.getElementById("submit-error");
+
+        function validateName(){
+            var name = document.getElementById("contact-name").value;
+            
+
+            if(name.length == 0)
+            {
+                nameError.innerHTML = "Name is required";
+                return false;
+            }
+            else if(name.length == 1 || name.length == 2 )
+            {
+                nameError.innerHTML = "Write name 3 char and more";
+                return false;
+            }
+                  nameError.innerHTML = '<ion-icon name="checkmark-circle"></ion-icon>';
+                return true;
+        }
+
+        function validatePhone(){
+            var phone = document.getElementById("contact-phone").value;
+            
+            if(phone.length == 0)
+            {
+                phoneError.innerHTML = "phone is required";
+                return false;
+            }
+
+            
+            if (phone.length == 10) {
+                phoneError.innerHTML = '<ion-icon name="checkmark-circle"></ion-icon>';
+                return true;
+            }
+            else
+            {
+                phoneError.innerHTML = "Must be length no 10";
+                return false;
+            }
+        }
+
+        function validateEmail(){
+            var email = document.getElementById("contact-email").value;
+            var check_email = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+            if(email.length == 0)
+            {
+                emailError.innerHTML = "email is required";
+                return false;
+            }
+            if(!check_email.test(email))
+            {
+                emailError.innerHTML = "Ex: z@z.zz";
+                return false;
+            }
+            if(email.length >= 5)
+            {
+                emailError.innerHTML = '<ion-icon name="checkmark-circle"></ion-icon>';
+                return true;
+            }
+            
+        }
+
+        function validateMessage(){
+            var message = document.getElementById("contact-message").value;
+            var required = 30;
+            var left = required - message.length;
+
+            if (message.length == 0) {
+                messageError.innerHTML = "message is required";
+                return false;
+            }
+
+            if (left > 0) {
+                messageError.innerHTML = left + " more char required";
+                return false;
+            }
+
+            messageError.innerHTML = '<ion-icon name="checkmark-circle"></ion-icon>';
+                return true;
+            
+        }
+
+        function validateForm(){
+            if(!validateName() || !validatePhone() || !validateEmail() || !validateMessage())
+            {
+                submitError.style = "color:red ; font-size:11px ; letter-spacing:2px";
+                submitError.innerHTML = "Please fix Error to submit";
+                return false;
+            }
+        }
+
+    </script>
+
+
+    <section id="footer">
+        <div class="container">
+
+            <div>
+                <p>useful links</p>
+                <nav>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">contact</a></li>
+                        <li><a href="#">footer</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div>
+                <p>newsletter</p>
+                <input type="text" placeholder="Your Email Address">
+                <input type="submit" value="SUBSCRIBE NOW">
+            </div>
+
+            <div>
+                <P>contact</P>
+                <p>123, xyz road bks 3 bangalare karnataka,in</p>
+                <nav>
+                    <ul>
+                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="mail"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </section>
+
+
+
+</body>
+</html>

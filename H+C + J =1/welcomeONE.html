@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script><!-- icons -->
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script><!-- icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- font logo-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!-- font logo-->
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet"><!-- font logo-->
+    
+    <title>WelcomeONE.com</title>
+</head>
+<style>
+     *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            scroll-behavior: smooth;
+        }
+        :root{
+            --white:#fff;
+            --main-blue:#03a9f4;
+        }
+        body{
+            background-image: linear-gradient(45deg , #03a9f4  ,#fff);
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        header{
+            background-color: var(--main-blue);
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            box-shadow: 0 1px 5px rgb(0, 0, 0,0.5);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        header p{
+            color:var(--white);
+            letter-spacing: 2px;
+            font-weight: bold;
+            font-size: 25px;
+            transition: 0.4s;
+        }
+        header ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;           
+        }
+        header ul li{
+            list-style: none;
+            margin: 0 10px;
+        }
+        header ul li a{
+            text-decoration: none;
+            padding: 7px;
+            color: var(--white);
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: 0.3s;
+            text-transform: capitalize;
+        }
+        header ul li a:hover{
+            background-color: var(--white);
+            color: var(--main-blue);
+        }
+        header .bars{
+            position: relative;
+            background-color: var(--main-blue);
+            width: 30px;
+            height: 30px;
+            border-radius: 3px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            
+        }
+        header .bars:after{
+            content: "";
+            position: absolute;
+            background-color: var(--white);
+            width: 80%;
+            height: 2px;
+            border-radius: 1px;
+            box-shadow: 0 8px 0 var(--white);
+            transition: 0.3s;
+        }
+        header .bars::before{
+            content: "";
+            position: absolute;
+            background-color: var(--white);
+            width: 80%;
+            height: 2px;
+            border-radius: 1px;
+            transform: translateY(-8px);
+            transition: 0.3s;
+        }
+        header .bars.active:after{
+            transform: rotate(-45deg);
+            box-shadow: 0 0 0 var(--white);
+        }
+        header .bars.active:before{
+            transform: rotate(45deg);
+        }
+
+         /*-----------------Start Account -----------------*/
+         header ul li .image{
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            background-color: transparent;
+            box-shadow:   1px 1px 7px rgb(0, 0, 0,0.8);
+        }
+        header ul li .image .info.active{
+            background-color: var(--main-blue);
+            width: 110px;
+            height: 100px;
+            border-radius: 4px;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction: column;
+            box-shadow:   none;
+            line-height: 40px;
+            position: absolute;
+            top: 45px;
+            box-shadow:   0px 0px 5px rgb(0, 0, 0,0.2);
+        }
+        header ul li .image .info:after{
+            content:"";
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: -4px;
+            border-radius: 2px;
+            background-color: var(--main-blue);
+            transform: rotate(45deg);
+            display: none;
+        }
+        header ul li .image .info.active:after{
+            display: block;
+        }
+        header ul li .image .info h5{
+            display: none;
+        }
+        header ul li .image .info.active h5{
+            display: block;
+        }
+        header ul li .image .info.active h5 a{
+            color: var(--white);
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+        }
+        header ul li .image .info.active h5:last-child a{
+            color: #e62d2d;
+        }
+        header ul li .image .info.active h5 a .logout{
+            font-size: 1.2rem;
+        }
+        header ul li .image .info.active h5 a:hover{
+            background-color: rgb(0, 0, 0,0.1);
+        }
+        header ul li .image img{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        }
+        /*-----------------Start section -----------------*/
+        section{
+            position: relative;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction: column;
+            min-height: 100vh;
+            width: 100%;
+        }
+        /*------------------start home -----------------*/
+        #home .logo{
+            display: flex;
+            justify-content:left;
+            align-items:center;
+            width: 90%;
+            height: 400px;
+            position: relative;
+            padding: 10px;
+            overflow: hidden;
+            background-color: transparent;
+        }
+        #home .logo p:nth-child(1){
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 70px;
+            font-family: 'DynaPuff', cursive;
+            letter-spacing: 1px;
+            color:var(--main-blue);
+            font-weight: bold;
+            overflow: hidden;
+            text-shadow: 0 1px 4px rgb(0, 0, 0,0.5);
+            transition: 0.4s;
+        }
+        #home .logo p:nth-child(2){
+            position: absolute;
+            bottom: 100px;
+            font-size: 13px;
+            line-height: 20px;
+            letter-spacing: 1px;
+            color: rgba(0, 63, 114, 0.918);
+            font-weight: bold;
+        }
+        /*------------------end home -----------------*/
+
+        /*------------------start calculator -----------------*/
+        #calculator{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            min-height: 100vh;
+            background-color: transparent;
+            position: relative;
+        }
+  
+        #calculator form{
+            position: relative;
+            display: grid; 
+            grid-template-columns: repeat(4,1fr);
+            width: 90%;
+            background-color: var(--main-blue);
+            height: 505px;
+            padding: 23px;
+            border-radius: 10px;
+            box-shadow:   1px 1px 5px rgb(0, 0, 0,0.8),
+                    inset 1px 1px 5px rgb(0, 0, 0,0.4);
+        }      
+        #calculator form .mode{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 37px;
+            background-color: var(--main-blue);
+            position: absolute;
+            right: 0px;
+            top: -50px;
+            border-radius: 5px;
+            font-size: 25px;
+            cursor: pointer;
+            box-shadow:   1px 1px 5px rgb(0, 0, 0,0.8),
+                    inset 1px 1px 5px rgb(0, 0, 0,0.4);
+        }
+        #calculator form .mode .night{
+            display: block;
+            position: absolute;
+            top: 6px;
+        }
+        #calculator form .mode .light{
+            display: none;
+            position: absolute;
+            top: 6px;
+        }
+        #calculator form .mode .night.moon{
+            display: none;
+        }
+        #calculator form .mode .light.sun{
+            display: block;
+        }
+        /*-----Start Mode-----*/
+        #calculator form.moon{
+            background-color: #222;
+        }
+        #calculator form.sun{
+            background-color: var(--main-blue);
+        }
+         /*-----Start Mode for num-----*/
+        #calculator form.moon .num{
+            background-color: #222;
+            box-shadow:   2px 2px 5px rgb(0, 0, 0,1),
+                    inset 2px 2px 5px rgb(0, 0, 0,1)
+        }
+
+
+        #calculator form .value{
+            position: relative;
+            grid-column: span 4;
+            width: 100%;
+            height: 50px;
+            padding-left: 8px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            background-color: rgb(252, 244, 244);
+            font-size: large;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow:   0px 0px 4px rgb(0, 0, 0,0.6),
+                    inset 0px 0px 4px rgb(0, 0, 0,0.6);
+        }
+        #calculator form .num{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            background-color: #008ecf;
+            margin: 3px;
+            border-radius: 5px;
+            box-shadow:   0px 0px 4px rgb(0, 0, 0,0.6),
+                    inset 0px 0px 4px rgb(0, 0, 0,0.6);
+            cursor: pointer;
+
+        }
+        #calculator form .c{/* for (C) */
+            grid-column: span 2;
+            background-color: #e62d2d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            margin: 3px;
+            border-radius: 5px;
+            box-shadow:   0px 0px 4px rgb(0, 0, 0,0.7),
+                    inset 0px 0px 4px rgb(0, 0, 0,0.7);
+            cursor: pointer;
+            font-size: 30px;
+
+        }
+        #calculator form .c:hover{
+            background-color: #d12b44;
+        }
+        #calculator form .num i{
+            font-size: 30px;
+        }
+        #calculator form .num:hover{
+            background-color: rgb(0, 0, 0,0.1);
+        }
+        #calculator form .plus{
+            grid-row: span 2;
+        }
+        #calculator form .equal{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            background-color: #008ecf;
+            margin: 3px;
+            border-radius: 5px;
+            font-size: 30px;
+            box-shadow:   0px 0px 4px rgb(0, 0, 0,0.6),
+                    inset 0px 0px 4px rgb(0, 0, 0,0.6);
+            cursor: pointer;
+        }
+        #calculator form .equal:hover{
+            background-color: #1d658f;
+        }
+        
+        /*------------------end calculator -----------------*/
+        #times{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+        }
+        #times .title{
+            position: absolute;
+            top: 34%;
+            font-size: 1.4em;
+            letter-spacing: 0.4em;
+            font-weight: bold;
+            font-family: 'Open Sans',sans-serif;
+            text-transform: uppercase;
+            color: #222;
+            transition: 0.4s;
+        }
+        #times .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 550px;
+            padding: 10px;
+            transition: 0.4s;
+        }
+        #times .container div{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            background-color: #008ecf;
+            margin: 0 10px;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            width: 180px;
+            height: 180px;
+            transition: 0.4s;
+            box-shadow:   2px 2px 7px rgb(0, 0, 0,0.7);
+             -webkit-box-reflect:  below 1px linear-gradient(transparent,#0007);
+        }
+        #times .container #h,#s{
+            transition: 0.4s;
+        }
+        #times .container div span:nth-child(1){
+            font-size: 65px;
+            color: var(--white);
+        }
+        #times .container div span:nth-child(2){
+            font-size: 20px;
+            letter-spacing: 1px;
+            color: #222;
+            text-transform: uppercase;
+            background-color: #127fb6;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transform: translateY(18px);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            position: relative;
+        }
+        #times .container div:last-child {
+            background-color: #ec0062;
+        }
+        #times .container div:last-child span:nth-child(2){
+            background-color: #ec0062;
+        }
+        #times .container div span:nth-child(2):after{
+            content:"";
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 1px;
+            background-color: rgb(0, 0, 0,0.4);
+        }
+    
+
+        #footer{
+            background-color: var(--main-blue);
+            opacity: 0.8;
+            width: 100%;
+            min-height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+        #footer .container{
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            flex-direction: row;
+            width: 100%;
+            min-height: 30vh;
+            position: relative;
+            bottom: 25px;
+            transition: 0.4s;
+        }
+        #footer .container .about{
+            width: 40px;
+            height: 40px;
+            background-color: rgba(34, 34, 34);
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        #footer .container .about:after{
+            content: "";
+            width: 14px;
+            height: 2px;
+            position: absolute;
+            background-color: #1fbb39;
+            border-radius: 1px;
+            transition: 0.3s;
+        }
+        #footer .container .about.active:after{
+            transform: rotate(-45deg);
+            background-color: #e62d2d;
+        }
+        #footer .container .about:before{
+            content: "";
+            width: 14px;
+            height: 2px;
+            position: absolute;
+            background-color: #1fbb39;
+            border-radius: 1px;
+            transform: rotate(270deg) ;
+            transition: 0.3s;
+
+        }
+        #footer .container .about.active:before{
+            transform: rotate(220deg);
+            background-color: #e62d2d;
+        }
+        #footer .container .about p{
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100px;
+            color: rgba(34, 34, 34);
+            text-transform: capitalize;
+        }
+        #footer .container .about.active p{
+            display: none;
+        }
+        #footer .container .about .content{
+            width: 240px;
+            height: 160px;
+            padding: 8px;
+            line-height: 24px;
+            letter-spacing: 1px;
+            background-color: #1d658f;
+            box-shadow:   0px 0px 4px rgb(0, 0, 0,0.6);
+            border-radius: 5px;
+            position: absolute;
+            top: -170px;
+            display: none; 
+            transition: 0.4s;
+        }
+        #footer .container .about .content::after{
+            content:"";
+            position: absolute;
+            bottom:-6px;
+            left: 48%;
+            width: 10px;
+            height: 10px;
+            border-radius: 3px;
+            background-color: #1d658f;
+            transform: rotate(-45deg);
+        }
+        
+         #footer .container .about.active .content.active {
+            display: block;
+            transition: 0.4s;
+        } 
+        #footer .container ul  {
+            display: flex;
+            justify-content: space-around;
+        }
+        #footer .container ul li{
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            margin: 0 10px;
+        }
+        #footer .container ul li a{
+            display: flex;
+            justify-content: space-around;
+            text-decoration: none;
+            color: rgba(34, 34, 34);
+        }
+        #footer .container ul li a ion-icon{
+            font-size: 23px;
+        }
+        #footer .container p{
+            color: rgb(34, 34, 34);
+            font-size: 14px;
+        }
+
+        /*-----------------End section -----------------*/
+        @media (max-width:600px){
+            header{
+                display: flex;
+                justify-content:space-between;
+                padding: 20px;
+            }
+            header ul{
+                display: none;   
+                justify-content: center;        
+                align-items: center;     
+                flex-direction: column;        
+                position: absolute;
+                top: 100%;
+                left: 60%;
+                background-color: var(--main-blue);
+                width: 40%;
+                height: 35vh;
+                padding: 10px;
+                transition: 0.3s;
+                border-bottom-left-radius: 30px;
+                z-index: 100;
+            }
+            header ul.active{
+                display: flex;
+                transition: 0.3s;
+            }
+            header .bars{
+                display: flex;
+            }
+            header ul li{
+                padding: 10px;
+                margin-bottom: 7px;
+            }
+            header ul li a{
+                font-size: 15px;
+            }
+            #times .title{
+            font-size: 1em;
+            letter-spacing: 0.4em;
+            
+        }
+            #times .container{
+                width: 300px;
+                padding: 10px;
+                
+            }
+            #times .container div{
+                width: 100px;
+                height: 100px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                background-color: var(--main-blue);
+                margin: 0 10px;
+                letter-spacing: 1px;
+                border-radius: 5px;
+                transition: 0.4s;
+                box-shadow:   2px 2px 7px rgb(0, 0, 0,0.7);
+                -webkit-box-reflect:  below 2px linear-gradient(transparent,#0008);
+            }
+            #times .container div span:nth-child(1){
+            font-size: 40px;
+        }
+        #times .container div span:nth-child(2){
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: #222;
+            text-transform: uppercase;
+            background-color: #127fb6;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transform: translateY(9px);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            position: relative;
+            }
+
+            #footer .container{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+        
+
+        @media (max-width:430px) { /* for logo (Home)*/
+            header p{
+                font-size: 20px;
+            }
+            #home .logo p:nth-child(1){
+                font-size: 37px;
+                left: 10px;
+            }
+        }
+        @media (min-width:700px) { /* for logo (Home)*/
+            #home .logo p:nth-child(2){
+                font-size: 20px;
+                line-height: 40px;
+                letter-spacing: 1px;
+                position: absolute;
+                bottom: 0px;
+            }
+
+            #calculator form{
+                width: 50%;
+            }
+        }
+
+        @media(min-width:1300px){
+            #calculator form{
+                width: 30%;
+            }
+        }
+        @media (min-width:1000px){
+            #home .logo{
+                width: 70%;
+            }
+        }
+
+        /*------------------Start Store--------------*/
+</style>
+<body>
+    <header>
+        <p>Mix-Store</p>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#calculator">calculator</a></li>
+            <li><a href="#times">times</a></li>
+            <li><a href="#footer">footer</a></li>
+            <li>
+                <div class="image">
+                    <img src="Palm tree wallpaper by Bawnny - Download on ZEDGE™ _ a62f.jfif" alt="">
+                        <div class="info">
+                            <h5><a href="#">profile</a> </h5>
+                            <h5><a href="loginONE.html">sign out<ion-icon name="log-out-outline" class="logout"></ion-icon></a></h5>
+                        </div>
+                </div>
+            </li>
+        </ul>
+            <div class="bars"></div><!-- This Is Menu -->
+    </header>
+
+
+    <section id="home"><!-- This Is Home -->
+
+        <div class="logo">
+            <p>Mix-Store</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis vero non reprehenderit
+                accusamus similique! Nisi unde.
+            </p>
+        </div>
+    </section>
+
+    <section id="calculator"><!-- This Is Calculator -->
+            <form action="#" name="calc">
+                <div class="mode">
+                    <div class="light"><ion-icon name="sunny-outline"></ion-icon></div>
+                    <div class="night"><ion-icon name="moon-outline"></ion-icon></div>
+                </div>
+                <input type="text" class="value" readonly name="txt">
+                <span class="c" onclick="calc.txt.value=''"><i>C</i></span>
+                <span class="num" onclick="calc.txt.value+='/'"><i>/</i></span>
+                <span class="num" onclick="calc.txt.value+='*'"><i>*</i></span>
+                <span class="num" onclick="calc.txt.value+='7'"><i>7</i></span>
+                <span class="num" onclick="calc.txt.value+='8'"><i>8</i></span>
+                <span class="num" onclick="calc.txt.value+='9'"><i>9</i></span>
+                <span class="num " onclick="calc.txt.value+='-'"><i>-</i></span>
+                <span class="num " onclick="calc.txt.value+='4'"><i>4</i></span>
+                <span class="num " onclick="calc.txt.value+='5'"><i>5</i></span>
+                <span class="num n9" onclick="calc.txt.value+='6'"><i>6</i></span>
+                <span class="num plus" onclick="calc.txt.value+='+'"><i>+</i></span>
+                <span class="num" onclick="calc.txt.value+='1'"><i>1</i></span>
+                <span class="num" onclick="calc.txt.value+='2'"><i>2</i></span>
+                <span class="num" onclick="calc.txt.value+='3'"><i>3</i></span>
+                <span class="num" onclick="calc.txt.value+='0'"><i>0</i></span>
+                <span class="num" onclick="calc.txt.value+='00'"><i>00</i></span>
+                <span class="num" onclick="calc.txt.value+='.'"><i>.</i></span>
+
+                <span class="equal" onclick="document.calc.txt.value=eval(calc.txt.value)"><i>=</i></span>
+            </form>
+    </section>
+
+
+    <section id="times"><!-- This Is audios -->
+        <div class="title">the time is now</div>
+        <div class="container">
+            <div id="h">
+                <span id="hours">00</span>
+                <span>housr</span>
+            </div>
+            <div id="m">
+                <span id="min">00</span>
+                <span>minutes</span>
+            </div>
+            <div id="s">
+                <span id="seconds">00</span>
+                <span>second</span>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="footer"><!-- This Is Footer -->
+        <div class="container">
+            
+            <div class="about">
+                <p>who are we?</p>
+                 <div class="content">
+                    An online Mix-Store  in women's, men's and
+                    children's clothing. We strive to be the first store
+                    to meet your desires and needs of the latest 
+                </div>
+            </div>
+               
+            <ul>
+                <li>
+                    <a href="#">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+
+            <p>all Right Saving &copy; 2022</p>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        let bars = document.querySelector(".bars"),
+            ul = document.querySelector("ul"),
+            image = document.querySelector(".image"),// for the Account 
+            info = document.querySelector(".info"), // for the Account 
+            about = document.querySelector(".about"),
+            content = document.querySelector(".content");
+
+        bars.onclick = function(){
+            bars.classList.toggle("active");
+            ul.classList.toggle("active");
+        }
+
+        image.onclick = function(){
+            image.classList.toggle("active");
+            info.classList.toggle("active");
+        }
+
+        about.onclick = function(){
+            about.classList.toggle("active"); 
+            content.classList.toggle("active"); 
+        }
+
+
+        let mode = document.querySelector(".mode"),
+            night = document.querySelector(".night"),
+            light = document.querySelector(".light"),
+            form  = document.querySelector("form");
+        
+            mode.onclick = function(){
+                night.classList.toggle("moon");
+                light.classList.toggle("sun");
+                form.classList.toggle("moon");  
+            }
+
+            //-------------------------------------------------------
+
+            function clock(){ // this is (Times)
+                var hours = document.getElementById("hours");
+                var min = document.getElementById("min");
+                var seconds = document.getElementById("seconds");
+
+                var hh = new Date().getHours();
+                var mm = new Date().getMinutes();
+                var ss = new Date().getSeconds();
+                
+                hours.innerHTML = hh;
+                min.innerText = mm;
+                seconds.innerHTML = ss;
+
+                if ( hours.innerHTML > 12)
+                {
+                    hours.innerHTML =  hours.innerHTML - 12 ;  
+                } 
+                else
+                {
+                    hours.innerHTML = hh;
+                }
+                if (hours.innerHTML < 10) {
+                    hours.innerHTML = "0"+hours.innerHTML;
+                }
+            }
+
+            var interval = setInterval(clock,1000);
+           
+            //----------------------------------------------------------
+            
+    </script>
+    
+    
+</body>
+</html>
