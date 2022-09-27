@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="basket-css.css">
+    <link rel="stylesheet" href="normalize.css">
+     <!--Google Font-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+     <!--Icons-->
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <title>All - Products</title>
+</head>
+<body>
+    <!--Start Header-->
+    <header>
+        <div class="container">
+            <a href="#"><img src="images/logo.png" alt=""></a> 
+            <ul>
+                <li><a href="homepage.html">home</a></li>
+                <li><a href="all-products.html">products</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+                <li><a href="LogReg.html">account</a></li>
+                <li><a href="#"><ion-icon name="bag-handle-outline"></ion-icon></a></li>
+            </ul>
+             <div class="bars"></div> 
+        </div>
+    </header>
+    <script>
+        let bars = document.querySelector(".bars");
+        let ul = document.querySelector("ul");
+
+        bars.onclick = function(){
+            bars.classList.toggle("active");
+            ul.classList.toggle("active");
+        }
+    </script>
+    <!--End Header-->
+    <!--Start Basket-->
+    <div id="basket">
+        <div class="container">
+            <header>
+                <h3>products</h3>
+                <h3>quantity</h3>
+                <h3>subtotal</h3>
+            </header>
+            <div class="product">
+                <div class="info">
+                    <img src="images/product-1.jpg" alt="">
+                    <div class="text">
+                        <h3>Red Printed T-Shirt</h3>
+                        <p>Price: $50.00</p>
+                        <ion-icon name="close-circle"></ion-icon>
+                    </div>
+                </div>
+                <form action="#">
+                    <input type="number" name="" min="0" value="1" style="padding-left: 3px; width: 50px; padding: 5px;" id="">
+                </form>
+                <h3>$50.00</h3>
+            </div>
+            <div class="product">
+                <div class="info">
+                    <img src="images/product-1.jpg" alt="">
+                    <div class="text">
+                        <h3>Red Printed T-Shirt</h3>
+                        <p>Price: $50.00</p>
+                        <ion-icon name="close-circle"></ion-icon>
+                    </div>
+                </div>
+                <form action="#">
+                    <input type="number" name="" min="0" value="1" style="padding-left: 3px; width: 50px; padding: 5px;" id="">
+                </form>
+                <h3>$50.00</h3>
+            </div>
+            <div class="product">
+                <div class="info">
+                    <img src="images/product-1.jpg" alt="">
+                    <div class="text">
+                        <h3>Red Printed T-Shirt</h3>
+                        <p>Price: $50.00</p>
+                        <ion-icon name="close-circle"></ion-icon>
+                    </div>
+                </div>
+                <form action="#">
+                    <input type="number" name="" min="0" value="1" style="padding-left: 3px; width: 50px; padding: 5px;" id="">
+                </form>
+                <h3>$50.00</h3>
+            </div>
+          
+
+            <div class="bill">
+                <div class="subtotal many">
+                    <h4>SubTotal</h4>
+                    <p>$200.00</p>
+                </div>
+                <div class="tax many">
+                    <h4>Tax</h4>
+                    <p>$25.00</p>
+                </div>
+                <div class="total many">
+                    <h4>Total</h4>
+                    <p>$225.00</p>
+                </div>
+                <a href="#">procced to pay</a>
+            </div>
+        </div>
+    </div>
+
+    <!--End Basket-->
+    <!--Start Footer-->
+    <div id="footer">
+        <div class="container">
+            <div class="box"> <!--Box (1) -->
+                <h2>downlaod our app</h2>
+                <p>download app for android and ios mobile phone</p>
+                <div class="and-ios">
+                   <a href="#"><img src="images/app-store.png" alt=""></a> 
+                   <a href="#"><img src="images/play-store.png" alt=""></a> 
+                </div>
+            </div> 
+            <div class="box"> <!--Box (2) -->
+                <img src="images/logo.png" alt="">
+                <p>our purpose is to sustainably make the pleasure and benefits of sports accessible to the many</p>
+            </div>
+            <div class="box"> <!--Box (3) -->
+                <h3>useful links</h3>
+                <ul>
+                    <li>coupons</li>
+                    <li>blog post</li>
+                    <li>return policy</li>
+                    <li>join affiliate</li>
+                </ul>
+            </div>
+            <div class="box"> <!--Box (4) -->
+                <h3>follow us</h3>
+                <ul>
+                    <li>facebook</li>
+                    <li>twitter</li>
+                    <li>instagram</li>
+                    <li>youtube</li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot">
+            CopyRight 2022 &hearts; - Red-Store
+        </div>
+     </div>
+    <!--End Footer-->
+    
+</body>
+</html>

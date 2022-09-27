@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="homepage-css.css">
+    <link rel="stylesheet" href="normalize.css">
+     <!--Google Font-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+     <!--Icons-->
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <title>T-shirt</title>
+</head>
+<body>
+    <!-- Start article -->
+    <article>
+        <header>
+            <div class="container">
+               <a href="homepage.html"><img src="images/logo.png" alt=""></a> 
+                <ul>
+                    <li><a href="homepage.html">home</a></li>
+                    <li><a href="all-products.html">products</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="LogReg.html">account</a></li>
+                    <li><a href="#"><ion-icon name="bag-handle-outline"></ion-icon></a></li>
+                </ul>
+                 <div class="bars"></div> 
+            </div>
+        </header>
+
+        <section>
+            <div class="container">
+                <div class="col">
+                    <div class="text">
+                        <h1>give your workout a new style!</h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum temporibus aliquid, esse nostrum alias ipsa fuga, aliquam deserunt fugiat atque voluptatem asperiores.</p>
+                    </div>
+                    <div class="btn">
+                        <button>explore now <ion-icon name="arrow-forward-outline"></ion-icon></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+     <!-- End article for Header -->
+    <script>
+        let bars = document.querySelector(".bars");
+        let ul = document.querySelector("ul");
+
+        bars.onclick = function(){
+            bars.classList.toggle("active");
+            ul.classList.toggle("active");
+        }
+    </script>
+     <!-- Start Picture -->
+     <div id="picture">
+        <div class="container">
+            <img src="images/category-1.jpg" alt="">
+            <img src="images/category-2.jpg" alt="">
+            <img src="images/category-3.jpg" alt="">
+        </div>
+     </div>
+
+     <!-- End Picture -->
+     <!-- Start Featured -->
+     <div id="featured">
+        <div class="main-specail">
+            <div class="text">
+                   featured products
+            </div>
+        </div>
+        <div class="container">
+            <a class="box" href="products-details.html"> <!-- buy (1)-->
+                <img src="images/product-1.jpg" alt="">
+                <div class="info">
+                    <p>Red Printed T-Shirt</p>
+                    <ul>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                    </ul>
+                    <p>$50.00</p>
+                </div>
+            </a>
+
+            <a class="box" href=""> <!-- buy (2)-->
+                <img src="images/product-2.jpg" alt="">
+                <div class="info">
+                    <p>HRX Sports Shoes</p>
+                    <ul>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                    </ul>
+                    <p>$75.00</p>
+                </div>
+            </a>
+
+            <a class="box" href=""> <!-- buy (3)-->
+                <img src="images/product-3.jpg" alt="">          
+                    <div class="info">
+                        <p>HRX Gary Trackpants</p>
+                        <ul>
+                            <li><span class="fa fa-star checked"></span></li>
+                            <li><span class="fa fa-star checked"></span></li>
+                            <li><span class="fa fa-star checked"></span></li>
+                            <li><span class="fa fa-star "></span></li>
+                            <li><span class="fa fa-star "></span></li>
+                        </ul>
+                        <p>$45.00</p>
+                    </div>
+            </a>
+
+            <a class="box" href=""> <!-- buy (4)-->
+                <img src="images/product-4.jpg" alt="">
+                <div class="info">
+                    <p>Blue Printed T-Shirt</p>
+                    <ul>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                    </ul>
+                    <p>$55.00</p>
+                </div>
+            </a>
+
+        </div>
+     </div>
+    <!-- End Featured -->
+    <!--Start Latest Products-->
+     <div id="latest">
+        <div class="main-specail">
+            <div class="text">
+                latest products
+            </div>
+        </div>
+        <div class="container">
+            <a class="box" href=""> <!-- buy (5)-->
+                <img src="images/product-5.jpg" alt="">
+                <div class="info">
+                    <p>Pump Gray Sports Shoes</p>
+                    <ul>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                    </ul>
+                    <p>$95.00</p>
+                </div>
+            </a>
+            <a class="box" href=""> <!-- buy (6)-->
+                <img src="images/product-6.jpg" alt="">
+                <div class="info">
+                    <p>Black Printed T-Shirt</p>
+                    <ul>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                    </ul>
+                    <p>$55.00</p>
+                </div>
+            </a>
+            <a class="box" href=""> <!-- buy (7)-->
+                <img src="images/product-7.jpg" alt="">
+                <div class="info">
+                    <p>HRX Set Of 3 Socks</p>
+                    <ul>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                    </ul>
+                    <p>$30.00</p>
+                </div>
+            </a>
+            <a class="box" href=""> <!-- buy (8)-->
+                <img src="images/product-8.jpg" alt="">
+                <div class="info">
+                    <p>Black Fossil Watch</p>
+                    <ul>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                    </ul>
+                    <p>$120.00</p>
+                </div>
+            </a>
+            <a class="box" href=""> <!-- buy (9)-->
+                <img src="images/product-9.jpg" alt="">
+                <div class="info">
+                    <p>Black SportsX Watch</p>
+                    <ul>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                    </ul>
+                    <p>$135.00</p>
+                </div>
+            </a>
+            <a class="box" href=""> <!-- buy (10)-->
+                <img src="images/product-10.jpg" alt="">
+                <div class="info">
+                    <p>Black HRX Shoes</p>
+                    <ul>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                    </ul>
+                    <p>$50.00</p>
+                </div>
+            </a>
+            <a class="box" href=""> <!-- buy (11)-->
+                <img src="images/product-11.jpg" alt="">
+                <div class="info">
+                    <p>Gary Nike Shoes</p>
+                    <ul>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                    </ul>
+                    <p>$55.00</p>
+                </div>
+            </a>
+            <a class="box" href=""> <!-- buy (12)-->
+                <img src="images/product-12.jpg" alt="">
+                <div class="info">
+                    <p>HRX Black Trackpants</p>
+                    <ul>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                    </ul>
+                    <p>$75.00</p>
+                </div>
+            </a>
+        </div>
+     </div>
+    <!--End Latest Products-->
+    <!--Start Show-->
+     <div id="show">
+        <div class="container">
+            <div class="col">
+                <img src="images/exclusive.png" alt="">
+            </div>
+            <div class="col">
+                <p>exclusively avalibel on Red-Store</p>
+                <h1>smart band 4</h1>
+                <p>the mi smart band  teatures a 39.9% larger (than mi band 3) amoled colo full-touch dispaly with adjustable brightness, so everything is clear as can be</p>
+                <div class="btn">
+                    <button>buy now <ion-icon name="arrow-forward-outline"></ion-icon></button>
+                </div>
+            </div>
+        </div>
+     </div>
+    <!--End Show-->
+    <!--Start Users-->
+     <div id="users">
+        <div class="container">
+            <div class="box">
+                <div class="up">
+                    <ion-icon name="people-circle-outline"></ion-icon>
+                    <ion-icon name="people-circle-outline"></ion-icon>
+                </div>
+                <div class="info">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro laboriosam dignissimos inventore, nihil odit veritatis dolorum incidunt architecto possimus blanditiis.</p>
+                    <ul>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                    </ul>
+                     <img src="images/user-1.png" alt="">
+                     <h3>sean parker</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="up">
+                    <ion-icon name="people-circle-outline"></ion-icon>
+                    <ion-icon name="people-circle-outline"></ion-icon>
+                </div>
+                <div class="info">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro laboriosam dignissimos inventore, nihil odit veritatis dolorum incidunt architecto possimus blanditiis.</p>
+                    <ul>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                    </ul>
+                     <img src="images/user-2.png" alt="">
+                     <h3>mike smith</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="up">
+                    <ion-icon name="people-circle-outline"></ion-icon>
+                    <ion-icon name="people-circle-outline"></ion-icon>
+                </div>
+                <div class="info">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro laboriosam dignissimos inventore, nihil odit veritatis dolorum incidunt architecto possimus blanditiis.</p>
+                    <ul>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star "></span></li>
+                    </ul>
+                     <img src="images/user-3.png" alt="">
+                     <h3>mabel joe</h3>
+                </div>
+            </div>
+        </div>
+     </div>
+    <!--End Users-->
+    <!--Start Footer-->
+     <div id="footer">
+        <div class="container">
+            <div class="box"> <!--Box (1) -->
+                <h2>downlaod our app</h2>
+                <p>download app for android and ios mobile phone</p>
+                <div class="and-ios">
+                   <a href="#"><img src="images/app-store.png" alt=""></a> 
+                   <a href="#"><img src="images/play-store.png" alt=""></a> 
+                </div>
+            </div> 
+            <div class="box"> <!--Box (2) -->
+                <img src="images/logo.png" alt="">
+                <p>our purpose is to sustainably make the pleasure and benefits of sports accessible to the many</p>
+            </div>
+            <div class="box"> <!--Box (3) -->
+                <h3>useful links</h3>
+                <ul>
+                    <li>coupons</li>
+                    <li>blog post</li>
+                    <li>return policy</li>
+                    <li>join affiliate</li>
+                </ul>
+            </div>
+            <div class="box"> <!--Box (4) -->
+                <h3>follow us</h3>
+                <ul>
+                    <li>facebook</li>
+                    <li>twitter</li>
+                    <li>instagram</li>
+                    <li>youtube</li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot">
+            CopyRight 2022 &hearts; - Red-Store
+        </div>
+     </div>
+    <!--End Footer-->
+
+    
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="products-details-css.css">
+    <link rel="stylesheet" href="normalize.css">
+     <!--Google Font-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+     <!--Icons-->
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <title>All - Products</title>
+</head>
+<body>
+    <!--Start Header-->
+    <header>
+        <div class="container">
+            <a href="#"><img src="images/logo.png" alt=""></a> 
+            <ul>
+                <li><a href="homepage.html">home</a></li>
+                <li><a href="all-products.html">products</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+                <li><a href="LogReg.html">account</a></li>
+                <li><a href="#"><ion-icon name="bag-handle-outline"></ion-icon></a></li>
+            </ul>
+             <div class="bars"></div> 
+        </div>
+    </header>
+    <script>
+        let bars = document.querySelector(".bars");
+        let ul = document.querySelector("ul");
+
+        bars.onclick = function(){
+            bars.classList.toggle("active");
+            ul.classList.toggle("active");
+        }
+    </script>
+    <!--End Header-->
+    <!--Start Details-->
+    <div id="details">
+        <div class="container">
+            <div class="col"> 
+                <img src="images/product-1.jpg" alt="">
+            </div>
+
+            <div class="col">
+                <h1>Red Printed Tshirt by HRX</h1>
+                <p class="price">$50.00</p>
+                <form action="#">
+                    <select name="" id="">
+                        <option value="">Select Size</option>
+                        <option value="XXL">XXL</option>
+                        <option value="XL">XL</option>
+                        <option value="L">L</option>
+                        <option value="M">M</option>
+                        <option value="S">S</option>
+                    </select>
+                    <div class="count-add">
+                        <input type="number" name="" value="1" min="0" id="">
+                        <a href="basket.html">Add To Card</a>
+                    </div>
+                </form>
+                <h3>product details</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique dolores autem blanditiis voluptatum voluptatibus adipisci iusto aut quae, quidem repudiandae delectus necessitatibus reiciendis? Ullam voluptas nihil saepe modi rem earum!
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--End Details-->
+    <!--Start Footer-->
+    <div id="footer">
+        <div class="container">
+            <div class="box"> <!--Box (1) -->
+                <h2>downlaod our app</h2>
+                <p>download app for android and ios mobile phone</p>
+                <div class="and-ios">
+                   <a href="#"><img src="images/app-store.png" alt=""></a> 
+                   <a href="#"><img src="images/play-store.png" alt=""></a> 
+                </div>
+            </div> 
+            <div class="box"> <!--Box (2) -->
+                <img src="images/logo.png" alt="">
+                <p>our purpose is to sustainably make the pleasure and benefits of sports accessible to the many</p>
+            </div>
+            <div class="box"> <!--Box (3) -->
+                <h3>useful links</h3>
+                <ul>
+                    <li>coupons</li>
+                    <li>blog post</li>
+                    <li>return policy</li>
+                    <li>join affiliate</li>
+                </ul>
+            </div>
+            <div class="box"> <!--Box (4) -->
+                <h3>follow us</h3>
+                <ul>
+                    <li>facebook</li>
+                    <li>twitter</li>
+                    <li>instagram</li>
+                    <li>youtube</li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot">
+            CopyRight 2022 &hearts; - Red-Store
+        </div>
+     </div>
+    <!--End Footer-->
+    
+</body>
+</html>

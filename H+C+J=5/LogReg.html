@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--css-->
+    <link rel="stylesheet" href="LogReg-css.css">
+    <link rel="stylesheet" href="normalize.css">
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!--Icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>LogReg</title>
+</head>
+<body>
+    <article>
+        <div class="container">
+            <div class="col"> <!--Column 1-->
+                <div class="text">
+                    <h1>here log your an account</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus perspiciatis dolor aut? Dicta repudiandae sint corporis id nihil magni deserunt. Beatae odio.</p>
+                </div>
+                <div class="btn">
+                    <a href="#" class="run sign">Sign up</a>
+                    <a href="#" class="run log">Login</a>
+                </div>
+            </div>
+            <div class="col"><!--Column 2-->
+                <form action="#" class="register" > <!--Form Register-->
+                    <h2>Sign Up</h2>
+                    <div class="inputBox">
+                        <ion-icon name="mail"></ion-icon>
+                        <input type="email" name="" id="contact-email" placeholder="Enter Email" onkeyup="validateEmail()">
+                        <div class="error-email"></div>
+                    </div>
+                    <div class="inputBox">
+                        <ion-icon name="person"></ion-icon>
+                        <input type="text" name="" id="contact-user" placeholder="Enter Username" onkeyup="validateUser()">
+                        <div class="error-user"></div>
+                    </div>
+                    <div class="inputBox">
+                        <ion-icon name="lock-closed"></ion-icon>
+                        <input type="password" name="" id="contact-pass" placeholder="Enter Password" onkeyup="validatePass()">
+                        <div class="error-pass"></div>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" id="contact-submit" value="Sing Up" onclick="validateSubmit()">
+                        <div class="error-submit sub"></div>
+                    </div>
+                </form>
+                <form action="#" class="login"><!--Form Login-->
+                    <h2>Login</h2>
+                    <div class="inputBox">
+                        <ion-icon name="person"></ion-icon>
+                        <input type="text" name="" id="contact-user-log" placeholder="Enter Username" onkeyup="validateUserLog()">
+                        <div class="error-user-log"></div>
+                    </div>
+                    <div class="inputBox">
+                        <ion-icon name="lock-closed"></ion-icon>
+                        <input type="password" name="" id="contact-pass-log" placeholder="Enter Password" onkeyup="validatePassLog()">
+                        <div class="error-pass-log"></div>
+                        
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Login" id="contact-submit-log" onclick="validateSubmitLog()">
+                        <div class="error-submit-log sub"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </article>
+    <script>
+        let sign = document.querySelector(".sign");
+        let log = document.querySelector(".log");
+        let register = document.querySelector(".register");
+        let login = document.querySelector(".login");
+        let run = document.querySelector(".run");
+
+        sign.onclick = function(){
+            login.classList.remove("active");
+            register.classList.add("active");
+        }
+        log.onclick = function(){
+            register.classList.remove("active");
+            login.classList.add("active");
+        }
+    </script>
+    <script>
+        let ErrorEmail = document.querySelector(".error-email");
+        let ErrorUser = document.querySelector(".error-user");
+        let ErrorPass = document.querySelector(".error-pass");
+        let ErrorSubmit = document.querySelector(".error-submit");
+        let req = "required";
+
+        //-------This validation For Register--------//
+
+        function validateEmail(){
+            let email = document.getElementById("contact-email").value;
+            let check_email = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if(email.length == 0){
+                ErrorEmail.innerHTML = req;
+                return false;
+            }
+            if(!check_email.test(email))
+            {
+                ErrorEmail.innerHTML = "Ex: z@z.zz";
+                return false;
+            }
+            if (email.length >= 6) {
+                ErrorEmail.innerHTML = '<ion-icon name="checkmark-circle" style="color:green;font-size:17px;"></ion-icon>';
+                return true;
+            }
+        }
+        function validateUser(){
+            let user = document.getElementById("contact-user").value;
+            if (user.length == 0) {
+                ErrorUser.innerHTML = req;
+                return false;
+            }
+            if(user.length <= 2){
+                ErrorUser.innerHTML = "char > 2";
+                return false;
+            }else{
+                ErrorUser.innerHTML = '<ion-icon name="checkmark-circle" style="color:green;font-size:17px;"></ion-icon>';
+                return true;
+            }   
+        }
+        function validatePass(){
+            let pass = document.getElementById("contact-pass").value;
+            let countPass = 0;
+            if (pass.length == 0) {
+                ErrorPass.innerHTML = req;
+                return false;
+            }
+            if(pass.length < 8){
+                ErrorPass.innerHTML = `(${pass.length})` + " length 8";
+                return false;
+            }
+            if(pass.length >= 8){
+                ErrorPass.innerHTML = '<ion-icon name="checkmark-circle" style="color:green;font-size:17px;"></ion-icon>';
+                return true;
+            }
+        }
+        function validateSubmit(){
+            if(!validateEmail() || !validateUser() || !validatePass()){
+                ErrorSubmit.innerHTML = "Please Inter Your Data";
+                return false;
+            }else{
+                ErrorSubmit.innerHTML = '<p style="color:green; display: flex; margin-left: 15px;"> Your Data <ion-icon name="checkmark-circle" style="color:green;font-size:17px; margin-left: 7px"></ion-icon></p> ';
+                return true;
+            }
+        }
+        //-------This validation For login--------//
+        let ErrorUserLog = document.querySelector(".error-user-log");
+        let ErrorPassLog = document.querySelector(".error-pass-log");
+        let ErrorSubmitLog = document.querySelector(".error-submit-log");
+
+        function validateUserLog(){
+            let user = document.getElementById("contact-user-log").value;
+            if (user.length == 0) {
+                ErrorUserLog.innerHTML = req;
+                return false;
+            }
+            if(user.length <= 2){
+                ErrorUserLog.innerHTML = "char > 2";
+                return false;
+            }else{
+                ErrorUserLog.innerHTML = '<ion-icon name="checkmark-circle" style="color:green;font-size:17px;"></ion-icon>';
+                return true;
+            }   
+        }
+        function validatePassLog(){
+            let pass = document.getElementById("contact-pass-log").value;
+            let countPass = 0;
+            if (pass.length == 0) {
+                ErrorPassLog.innerHTML = req;
+                return false;
+            }
+            if(pass.length < 8){
+                ErrorPassLog.innerHTML = `(${pass.length})` + " length 8";
+                return false;
+            }
+            if(pass.length >= 8){
+                ErrorPassLog.innerHTML = '<ion-icon name="checkmark-circle" style="color:green;font-size:17px;"></ion-icon>';
+                return true;
+            }
+        }
+        function validateSubmitLog(){
+            if( !validateUserLog() || !validatePassLog()){
+                ErrorSubmitLog.innerHTML = "Please Ckeck User or Pass ";
+                return false;
+            }else{
+                ErrorSubmitLog.innerHTML = '<p style="color:green; display: flex; margin-left: 15px;"> Your Data <ion-icon name="checkmark-circle" style="color:green;font-size:17px; margin-left: 7px"></ion-icon></p> ';
+                return true;
+            }
+        }
+    </script>
+    
+</body>
+</html>
