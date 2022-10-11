@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>learning JS</title>
+</head>
+
+<body>
+    <form action="#" id="register" method="get">
+        <textarea name="" id="textarea" cols="30" rows="10"></textarea><br><br><br>
+        <div id="count-textarea"></div><br><br><br>
+        <input type="submit" name="" value="Register" id="submit" style="cursor: pointer;">
+    </form>
+    <script>
+        // Strat TextArea
+        let txtArea = document.getElementById("textarea"); // the var is textarea
+        let countTxtArea = document.getElementById("count-textarea");// the var is count-textarea
+        let countNum = 30;
+        countTxtArea.innerHTML = countNum;
+
+        txtArea.onkeyup = function () {
+            countTxtArea.innerHTML = countNum - txtArea.value.length;
+            return true;
+        };
+
+    </script>
+    <script src="learn.js"></script>
+
+</body>
+
+</html>
