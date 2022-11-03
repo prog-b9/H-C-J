@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Image</title>
+    <!--icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Css Normalize-->
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: 'Cairo', sans-serif;
+
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 900px;
+    }
+
+    .container .links {
+        display: flex;
+        list-style: none;
+        background-color: #17867b;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        padding: 25px;
+    }
+
+    .container .links li {
+        margin: 0 20px;
+        cursor: pointer;
+    }
+
+    .container .links li a {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: #fff;
+        font-size: 20px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: .2s;
+    }
+
+    .container .links li a:hover {
+        background-color: #11665d;
+        transition: .2s;
+        color: #fff;
+
+    }
+
+    /* active == a */
+    .container .links li .active {
+        background-color: #fff;
+        color: #444;
+
+    }
+
+    .container .boxs {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 30px;
+        margin-top: 40px;
+    }
+
+    /* .container .boxs .store-item {} */
+
+    .container .boxs .store-item img {
+        max-width: 100%;
+    }
+
+    @media (max-width:400px) {
+        .container .boxs {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+            margin-top: 40px;
+            grid-gap:5px
+        }
+
+        .container .links {
+            display: flex;
+            list-style: none;
+            background-color: #17867b;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 0;
+        }
+
+        .container .links li {
+            margin: 13px 0;
+        }
+
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <ul class="links">
+            <li><a href="#" class="active btn">all</a></li>
+            <li><a href="#" class="btn">logo design </a></li>
+            <li><a href="#" class="btn">web design</a></li>
+            <li><a href="#" class="btn">mobile apps</a></li>
+        </ul>
+
+        <div class="boxs">
+
+
+            <div class="store-item logo">
+                <img src="img/logo1.jpg" alt="">
+            </div>
+            <div class="store-item mobile">
+                <img src="img/mobile1.jpg" alt="">
+            </div>
+            <div class="store-item web">
+                <img src="img/web1.jpg" alt="">
+            </div>
+
+
+            <div class="store-item logo">
+                <img src="img/logo2.jpg" alt="">
+            </div>
+            <div class="store-item mobile">
+                <img src="img/mobile2.jpg" alt="">
+            </div>
+            <div class="store-item web">
+                <img src="img/web2.jpg" alt="">
+            </div>
+
+
+            <div class="store-item logo">
+                <img src="img/logo3.jpg" alt="">
+            </div>
+            <div class="store-item mobile">
+                <img src="img/mobile3.jpg" alt="">
+            </div>
+            <div class="store-item web">
+                <img src="img/web3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.querySelectorAll(".btn");
+        let storeItem = document.querySelectorAll(".store-item");
+        let logo = document.querySelectorAll(".logo");
+        let web = document.querySelectorAll(".web");
+        let mobile = document.querySelectorAll(".mobile");
+
+        btn.forEach((e, index) => {
+            e.addEventListener("click", () => {
+
+                // e.classList.add("active");
+
+                // e.classList.remove("active");
+
+                switch (index) {
+                    case 0:
+                        storeItem.forEach((item) => {
+                            item.style.display = "block";
+                        });
+                        break;
+                    case 1:
+                        logo.forEach((item) => {
+                            item.style.display = "block";
+                        });
+                        web.forEach((item) => {
+                            item.style.display = "none";
+                        });
+                        mobile.forEach((item) => {
+                            item.style.display = "none";
+                        });
+                        break;
+                    case 2:
+                        logo.forEach((item) => {
+                            item.style.display = "none";
+                        });
+                        web.forEach((item) => {
+                            item.style.display = "block";
+
+                        });
+                        mobile.forEach((item) => {
+                            item.style.display = "none";
+                        });
+                        break;
+                    case 3:
+                        logo.forEach((item) => {
+                            item.style.display = "none";
+                        });
+                        web.forEach((item) => {
+                            item.style.display = "none";
+                        });
+                        mobile.forEach((item) => {
+                            item.style.display = "block";
+                        });
+                        break;
+                    default:
+                        break;
+                }
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

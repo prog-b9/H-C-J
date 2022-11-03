@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generator Text</title>
+    <!--icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Css Normalize-->
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: 'Cairo', sans-serif;
+
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        background-color: #ddd;
+        margin: 50px;
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        min-height: 70vh;
+    }
+
+    .container .text {
+        /* transform: translateY(150px); */
+        background-color: aquamarine;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px rgba(0 0 0 / 50%);
+        line-height: 2;
+    }
+
+    .container button {
+        margin-top: 10px;
+        height: 40px;
+        width: 100px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        box-shadow: 1px 1px 5px rgba(0 0 0 / 50%);
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima explicabo enim cumque nobis
+            ducimus, porro, nesciunt iste architecto placeat atque itaque harum, natus voluptatum officia fugit quod
+            dolorum fuga exercitationem?</div>
+        <button onclick="changeText()">ChangeText</button>
+    </div>
+
+
+    <script>
+        function changeText() {
+            let texts = {
+                text1: "basil mohammed yahya al zafrah basil mohammed yahya al zafrahbasil mohammed yahya al zafrah basil mohammed yahya al zafrah basil mohammed yahya al zafrah basil mohammed yahya al zafrah basil mohammed yahya al zafrah",
+                text2: "rayan tamem al amry rayan tamem al amry  rayan tamem al amry  rayan tamem al amry  rayan tamem al amry  rayan tamem al amry  rayan tamem al amry  rayan tamem al amry  rayan tamem al amry  rayan tamem al amry  rayan tamem al amry rayan tamem al amry  rayan tamem al amry ",
+                text3: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus asperiores libero molestias voluptates tempora culpa recusandae labore quod, dignissimos molestiae rerum beatae possimus quibusdam ab sunt eaque debitis magnam mollitia!     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus asperiores libero molestias voluptates tempora culpa recusandae labore quod, dignissimos molestiae rerum beatae possimus quibusdam ab sunt eaque debitis magnam mollitia!",
+            }
+            // console.log(texts);
+
+            // Object.keys => give Me Array []
+            let keyTexts = Object.keys(texts);
+
+            // give me index from 0 to 2
+            // and give me text1 & text2 & text3
+            let mixText = keyTexts[Math.floor(Math.random() * keyTexts.length)]; 
+
+            // let quote = texts[mixText];
+
+            // here give me value the index (text1 == basil mohammed....)
+            document.querySelector(".text").innerHTML = texts[mixText];
+
+        }
+
+    </script>
+
+</body>
+
+</html>

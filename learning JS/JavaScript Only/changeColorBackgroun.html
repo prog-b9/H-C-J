@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>changeColorbackground</title>
+    <!--icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Css Normalize-->
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: 'Cairo', sans-serif;
+
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 10px;
+        border-radius: 5px;
+        border:none;
+        outline: none;
+        box-shadow: 1px 1px 5px rgba(0 0 0 / 60%);
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: aliceblue;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <button class="btn">Click For Change Color Background</button>
+    </div>
+    <script>         
+            let colors = ["red","green","blue","grey","yellow"];
+            let index = 0;
+            let btn = document.querySelector(".btn");
+
+            btn.addEventListener("click" , () =>{
+             
+                document.body.style.background = colors[index++];
+
+                if (index == 4) {
+                    index = 0;
+                    
+                }
+            });        
+    </script>
+
+</body>
+
+</html>

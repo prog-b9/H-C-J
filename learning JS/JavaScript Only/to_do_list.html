@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <!--icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Css Normalize-->
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: 'Cairo', sans-serif;
+
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        flex-direction: column;
+        background-color: #ddd;
+    }
+
+    .container .header-insert {
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        background-color: #ddd;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px rgba(0 0 0 / 40%);
+
+    }
+
+    .container .header-insert .input {
+        width: 100%;
+        height: 40px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .container .header-insert .btn {
+        margin-left: 10px;
+        height: 40px;
+        width: 100px;
+        font-size: 25px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        background-color: green;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .container .output {
+        margin-top: 50px;
+        background-color: #ddd;
+        width: 100%;
+        border-radius: 5px;
+        padding: 10px;
+        list-style: none;
+        box-shadow: 1px 1px 5px rgba(0 0 0 / 40%);
+    }
+
+    .container .output li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    .container .output li:not(:last-child)::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(0 0 0 / 40%);
+        bottom: -10px;
+    }
+
+    .container .output li .counter {
+        background-color: rgb(19, 116, 190);
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5px;
+        border-radius: 5px;
+        color: #fff;
+    }
+
+    .container .output li p {
+        background-color: #fff;
+        width: 380px;
+        padding: 5px;
+        border-radius: 5px;
+        line-height: 1.5;
+        word-wrap: break-word;
+    }
+
+    .container .output li .delete {
+        background-color: red;
+        padding: 5px;
+        border-radius: 5px;
+        margin-left: 5px;
+        color: #fff;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="header-insert">
+            <input type="text" class="input" placeholder="Write Your Task...">
+            <button class="btn" onclick="insertTask()">Add</button>
+        </div>
+
+        <ul class="output">
+            <h1>Tasks: </h1>
+        </ul>
+    </div>
+    <script>
+        let input = document.querySelector(".input");
+        let btn = document.querySelector(".btn");
+
+        function insertTask() {
+            let ul = document.querySelectorAll(".output");
+            ul.forEach((e, index) => {
+                let li = document.createElement("li");
+                let p = document.createElement("p");
+                let del = document.createElement("div");
+
+                if (input.value == "") {
+                    return;
+                } else {
+                    // e = ul;
+                    e.appendChild(li);
+                    li.appendChild(p);
+
+                    // add class to del
+                    del.className = "delete";
+                    // add del to li (child) to li (parant)
+                    li.appendChild(del);
+                    del.innerHTML = "delete";
+
+                    del.addEventListener("click", () => {
+                        li.style.display = "none";
+                    });
+
+
+                    p.innerHTML = input.value;
+
+                    input.value = "";
+                }
+            });
+        }
+
+        input.addEventListener("keydown", (event) => {
+            if (event.key == "Enter") {
+                insertTask();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
