@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- CSS Master -->
+    <link rel="stylesheet" href="css/master.css">
+    <!-- Font Cairo Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Open+Sans:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700&display=swap">
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- logo-tap iamges website in top -->
+    <link rel="icon" href="images/logo-tap.jpg">
+    <title>Special Design</title>
+</head>
+
+<body>
+    <!-- Start Settings Box -->
+    <div class="settings-box">
+        <ion-icon name="settings-sharp" class="setting"></ion-icon>
+        <h1>settings</h1>
+        <div class="option-box">
+            <h2>colors</h2>
+            <ul class="colors-content">
+                <li class="active" data-color="#FF9800"></li>
+                <li data-color="#E91E63"></li>
+                <li data-color="#009688"></li>
+                <li data-color="#03A9F4"></li>
+                <li data-color="#4CAF50"></li>
+            </ul>
+        </div>
+        <div class="option-box">
+            <h2 style="font-size: 16px;">random background</h2>
+            <div class="background-content">
+                <div class="yes active" data-background="yes">yes</div>
+                <div class="no" data-background="no">no</div>
+            </div>
+        </div>
+        <div class="option-box">
+            <h2 style="font-size: 16px;">bullets show</h2>
+            <div class="bullet-content">
+                <div class="yes active" data-bullet="yes">yes</div>
+                <div class="no" data-bullet="no">no</div>
+            </div>
+        </div>
+        <button class="reset-options">
+            reset options
+        </button>
+
+    </div>
+    <!-- End Settings Box -->
+    <!-- Start Nav Bullets -->
+    <div class="nav-bullets">
+        <div class="bullet" data-section=".landing">
+            <div class="tooltip">home</div>
+        </div>
+        <div class="bullet" data-section=".about">
+            <div class="tooltip">about</div>
+        </div>
+        <div class="bullet" data-section="#skills">
+            <div class="tooltip">our skills</div>
+        </div>
+        <div class="bullet" data-section=".gallery">
+            <div class="tooltip">our gallery</div>
+        </div>
+        <div class="bullet" data-section=".features">
+            <div class="tooltip">our features</div>
+        </div>
+    </div>
+    <!-- End Nav Bullets -->
+    <!-- Start Landing -->
+    <div class="landing">
+        <div class="container">
+            <div class="overlay"></div>
+            <header>
+                <div class="logo">special design</div>
+                <ul>
+                    <li><a href="#" data-section=".landing" class="active">home</a></li>
+                    <li><a href="#" data-section=".about">about</a></li>
+                    <li><a href="#" data-section="#skills">our skills</a></li>
+                    <li><a href="#" data-section=".gallery">our gallery</a></li>
+                    <li><a href="#" data-section=".features">our features</a></li>
+                </ul>
+                <div class="bars"></div>
+            </header>
+            <div class="intro-text">
+                <h1>we are <span class="creative">creative</span> agency</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum voluptas aliquid neque iusto magni
+                    uam optio iste sint
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Start About Us -->
+    <div class="about">
+        <div class="container">
+            <div class="info">
+                <h1 class="special-heading">about us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, voluptate ad earum ullam ex labore
+                    expedita voluptas quibusdam laboriosam a quod veniam delectus sit! Distinctio sequi assumenda itaque
+                    labore vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident soluta, aperiam
+                    eveniet ex tempore, sapiente corrupti ad numquam, ratione non vitae nulla voluptatibus animi.
+                    Provident doloremque nisi id consequuntur culpa?</p>
+            </div>
+            <img src="images/about-us.png" alt="">
+        </div>
+    </div>
+    <!-- End About Us -->
+    <!-- Start Our Skills -->
+    <div id="skills">
+        <h1 class="special-heading">our skills</h1>
+        <div class="container">
+            <div class="box">
+                <div class="label">HTML</div>
+                <div class="line">
+                    <div class="line-content" data-goal="19%"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="label">CSS</div>
+                <div class="line">
+                    <div class="line-content" data-goal="80%"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="label">JavaScript</div>
+                <div class="line">
+                    <div class="line-content" data-goal="50%"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="label">Python</div>
+                <div class="line">
+                    <div class="line-content" data-goal="10%"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="label">Laravel</div>
+                <div class="line">
+                    <div class="line-content" data-goal="20%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Our Skills -->
+    <!-- Start Our Gallery-->
+    <div class="gallery">
+        <div class="container">
+            <h1 class="special-heading">our gallery</h1>
+            <div class="box-images">
+                <img src="images/gallery-01.jpg" alt="image one">
+                <img src="images/gallery-02.jpg" alt="image two">
+                <img src="images/gallery-03.jpg" alt="image three">
+                <img src="images/gallery-04.jpg" alt="image four">
+                <img src="images/gallery-05.jpg" alt="image five">
+                <img src="images/gallery-06.jpg" alt="image sex">
+                <img src="images/gallery-07.jpg" alt="image seven">
+                <img src="images/gallery-08.jpg" alt="image eight">
+                <img src="images/gallery-09.jpg" alt="image nine">
+                <img src="images/gallery-010.jpg" alt="image ten">
+            </div>
+        </div>
+    </div>
+    <!-- End Our Gallery-->
+    <!-- Start Our Features -->
+    <div class="features">
+        <h1 class="special-heading">our features</h1>
+        <div class="container">
+
+            <div class="box">
+                <img src="images/feat-01.png" alt="">
+                <div class="info">
+                    <h2>computer programming</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, earum facilis dolor id quae
+                        numquam obcaecati</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/feat-02.png" alt="">
+                <div class="info">
+                    <h2>web developer</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, earum facilis dolor id quae
+                        numquam obcaecati</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/feat-03.png" alt="">
+                <div class="info">
+                    <h2>front-end-developer</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, earum facilis dolor id quae
+                        numquam obcaecati</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/feat-04.png" alt="">
+                <div class="info">
+                    <h2>back-end-developer</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, earum facilis dolor id quae
+                        numquam obcaecati</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/feat-05.png" alt="">
+                <div class="info">
+                    <h2>full-stack-developer</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, earum facilis dolor id quae
+                        numquam obcaecati</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/feat-06.png" alt="">
+                <div class="info">
+                    <h2>user interface</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, earum facilis dolor id quae
+                        numquam obcaecati</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Our Features -->
+    <!-- Start Taps -->
+    <div class="taps">
+        <div class="container">
+            <ul class="taps-btn">
+                <li class="active" data-tap=".one">HTML</li>
+                <li data-tap=".two">CSS</li>
+                <li data-tap=".three">JavaScript</li>
+            </ul>
+            <ul class="taps-content">
+                <div class="one"> The <strong>Hyper Text Markup Language</strong> or HTML is the standard markup
+                    language for documents designed to be displayed in a web browser. It can be assisted by technologies
+                    such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</div>
+                <div class="two"> <strong>Cascading Style Sheets</strong> (CSS) is a style sheet language used for
+                    describing the presentation of a document written in a markup language such as HTML or XML
+                    (including XML dialects such as SVG, MathML or XHTML).[1] CSS is a cornerstone technology of the
+                    World Wide Web, alongside HTML and JavaScript.</div>
+                <div class="three"> <strong>JavaScript</strong> often abbreviated as JS, is a programming language that
+                    is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of
+                    websites use JavaScript on the client side for webpage behavior, often incorporating third-party
+                    libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users'
+                    devices.</div>
+            </ul>
+        </div>
+    </div>
+    <!-- End Taps -->
+    <!-- Start FAQ -->
+    <div class="faq">
+        <h1 class="special-heading">questions</h1>
+        <div class="container">
+            <img src="images/problem.png" alt="questionsImages">
+            <div class="questions">
+                <div class="question-content">
+                    <ion-icon data-arrow=".eng" class="arrow" name="caret-forward-outline"></ion-icon>
+                    <div class="question ">how to learning English</div>
+                </div>
+                <div class="answer eng">
+                    The <strong>English</strong> Wikipedia is, along with the Simple English Wikipedia, one of two English-language editions of Wikipedia, an online encyclopedia. It was founded on 15 January 2001 as Wikipedia's first edition and, as of 4 December 2022, has the most articles of any edition, at 6,583,470.[1] As of December 2022, 11% of articles in all Wikipedias belong to the English-language edition; this share was more than 50% in 2003 The edition's one-billionth edit was made on 13 January 2021.
+                </div>
+                <div class="question-content">
+                    <ion-icon data-arrow=".html" class="arrow" name="caret-forward-outline"></ion-icon>
+                    <div class="question">how to learning HTML</div>
+                </div>
+                <div class="answer html">
+                    The <strong>Hyper Text Markup Language</strong> or HTML is the standard markup
+                    language for documents designed to be displayed in a web browser. It can be assisted by technologies
+                    such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+                </div>
+                <div class="question-content">
+                    <ion-icon data-arrow=".css" class="arrow" name="caret-forward-outline"></ion-icon>
+                    <div class="question">how to learning CSS</div>
+                </div>
+                <div class="answer css">
+                    <strong>Cascading Style Sheets</strong> (CSS) is a style sheet language used for
+                    describing the presentation of a document written in a markup language such as HTML or XML
+                    (including XML dialects such as SVG, MathML or XHTML).[1] CSS is a cornerstone technology of the
+                    World Wide Web, alongside HTML and JavaScript.
+                </div>
+                <div class="question-content">
+                    <ion-icon data-arrow=".js" class="arrow" name="caret-forward-outline"></ion-icon>
+                    <div class="question">how to learning JavaScript</div>
+                </div>
+                <div class="answer js">
+                    <strong>JavaScript</strong> often abbreviated as JS, is a programming language that
+                    is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of
+                    websites use JavaScript on the client side for webpage behavior, often incorporating third-party
+                    libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users'
+                    devices.
+                </div>
+                <div class="question-content">
+                    <ion-icon data-arrow=".py" class="arrow" name="caret-forward-outline"></ion-icon>
+                    <div class="question">how to learning Python</div>
+                </div>
+                <div class="answer py">
+                    <strong>Python</strong> is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation,
+                    Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End FAQ -->
+    <!-- Start Filter Images -->
+    <div class="filter-images">
+        <h1 class="special-heading">filters images</h1>
+        <div class="container">
+            <ul class="links">
+                <li data-filt=".all" class="active">all</li>
+                <li data-filt=".laptop">laptops</li>
+                <li data-filt=".phone">phones</li>
+                <li data-filt=".bag">bags</li>
+            </ul>
+            <div class="images">
+                <img class="all laptop" src="images/laptop-01.jpg" alt="">
+                <img class="all laptop" src="images/laptop-02.jpg" alt="">
+                <img class="all laptop" src="images/laptop-03.jpg" alt="">
+                <img class="all phone" src="images/phone-01.jpg" alt="">
+                <img class="all phone" src="images/phone-02.jpg" alt="">
+                <img class="all phone" src="images/phone-03.jpg" alt="">
+                <img class="all phone" src="images/phone-04.jpg" alt="">
+                <img class="all bag" src="images/bag-01.jpg" alt="">
+                <img class="all bag" src="images/bag-02.jpg" alt="">
+                <img class="all bag" src="images/bag-03.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- End Filter Images -->
+
+    <script src="master.js"></script>
+</body>
+
+</html>
