@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Master -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Logo The Title Tap -->
+    <link rel="icon" href="images/conversation.png">
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Open+Sans:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700&display=swap">
+    <!--Icon-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Quiz App</title>
+</head>
+
+<body>
+    <div class="quiz-app">
+        <header class="quiz-info">
+            <div class="category">category : <span>front end</span> </div>
+            <div class="question-count"> question count : <span></span> </div>
+        </header>
+        <!-- Question Area -->
+        <div class="question-area"></div>
+        <!-- Answers Area -->
+        <div class="answer-area"></div>
+        <button class="submit">submit answer</button>
+        <div class="bullets">
+            <ul class="points"></ul>
+            <div class="countdown"></div>
+        </div>
+        <div class="results"></div>
+
+        <div class="now-question">
+            Now Question <span class="question-number"></span> form 10
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
