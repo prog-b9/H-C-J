@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link css primary -->
+    <link rel="stylesheet" href="register.css">
+    <!-- link css normalize -->
+    <link rel="stylesheet" href="normalize.css">
+    <!-- icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Font Cairo Goggle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <title>Sign Up </title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- First column For Register  -->
+        <div class="col">
+            <h1>sign up</h1>
+            <form id="form" name="myForm" method="GET" autocomplete="off">
+
+                <!-- input Email -->
+                <div class="inputBox">
+                    <input type="text" id="email" placeholder="Email" onkeyup="emailValidate()">
+                    <div class="error-email"></div>
+                    <!--email is reqiured-->
+                    <ion-icon name="mail"></ion-icon>
+                </div>
+                <!-- input Phone-Number -->
+                <div class="inputBox">
+                    <input type="text" id="phone" placeholder="Phone-Number" onkeyup="phoneValidate()">
+                    <div class="error-phone"></div>
+                    <!--phone is reqiured-->
+                    <ion-icon name="call"></ion-icon>
+                </div>
+                <!-- input Username -->
+                <div class="inputBox">
+                    <input type="text" id="user" placeholder="Username" onkeyup="userValidate()">
+                    <div class="error-user"></div>
+                    <!--user is reqiured-->
+                    <ion-icon name="person"></ion-icon>
+                </div>
+                <!-- input Password -->
+                <div class="inputBox">
+                    <input type="text" id="pass" placeholder="Password" onkeyup="passValidate()">
+                    <div class="error-pass"></div>
+                    <!--pass is reqiured-->
+                    <ion-icon name="lock-closed"></ion-icon>
+                </div>
+                <!-- button Submit -->
+                <div class="inputBox">
+                    <button id="btn-sign-up" onclick="submitValidate()">sign up</button>
+                    <div class="error-submit" style="margin-top:15px;color: red;"></div>
+                </div>
+
+                <div class="btn-footer">
+                    <p>I'm already a member! <a href="login.html">Sign In</a> </p>
+                </div>
+
+            </form>
+        </div>
+        <!-- Second Column For Login -->
+        <div class="col">
+            <h1>sign in</h1>
+            <div class="text">sign in here if you hava account!</div>
+            <a href="login.html">sign in</a>
+        </div>
+    </div>
+
+    <script>
+        let http = new XMLHttpRequest();
+        http.open("GET", "http://192.168.100.16/my_project_js/select.php");
+        http.send();
+        // console.log(http);
+
+        http.onreadystatechange = () => {
+            if (http.readyState === 4 && http.status === 200) {
+                let myJson = JSON.parse(http.responseText);
+                console.log(myJson);
+
+                for (let i = 0; i < myJson.length; i++) {
+                    console.log(myJson[i].email);
+                }
+            }
+        };
+
+    </script>
+
+    <!-- <script>
+        //this variable for Input
+        let email = document.getElementById("email");
+        let phone = document.getElementById("phone");
+        let user = document.getElementById("user");
+        let pass = document.getElementById("pass");
+
+
+
+        //this variable for Validate
+        let emailError = document.querySelector(".error-email");
+        let phoneError = document.querySelector(".error-phone");
+        let userError = document.querySelector(".error-user");
+        let passError = document.querySelector(".error-pass");
+        let submitError = document.querySelector(".error-submit");
+
+
+
+        // Function Validate For Email
+        function emailValidate() {
+            let ReEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,})+$/;
+            // this condition if Empty
+            if (!email.value) {
+                emailError.style.color = "red";
+                emailError.innerHTML = "Email is required";
+                return false;
+            }
+            // this condition is not valid for email
+            if (!ReEmail.test(email.value)) {
+                emailError.style.color = "red";
+                emailError.innerHTML = "Ex: a@a.aa";
+                return false;
+            } else {
+                // this is valid the email
+                emailError.style.color = "var(--color-primary)";
+                emailError.innerHTML = "Email is valid";
+                return true;
+            }
+        }
+
+        // Function Validate For Phone-Number
+        function phoneValidate() {
+            // the phone-number here say if writing without number
+            let RePhone = /[^\d+]/;
+            if (phone.value.match(RePhone)) {
+                phoneError.style.color = "red";
+                phoneError.innerHTML = "must be number";
+                return false;
+            }
+            // the phone-number if was Empty
+            if (!phone.value) {
+                phoneError.style.color = "red";
+                phoneError.innerHTML = "Phone-Number is required";
+                return false;
+            }
+            // the phone-number if was less from length 10
+            if (phone.value.length < 10) {
+                phoneError.style.color = "red";
+                phoneError.innerHTML = "Phone-Number is must be length 10";
+                return false;
+            }
+            // the phone-number if was more from length 10
+            if (phone.value.length > 10) {
+                phoneError.style.color = "red";
+                phoneError.innerHTML = "Phone-Number is too high";
+                return false;
+            }
+            // the phone-number if equal from length 10
+            if (phone.value.length === 10) {
+                phoneError.style.color = "var(--color-primary)";
+                phoneError.innerHTML = "Phone-Number is valid";
+                return true;
+            }
+        }
+
+        // Function Validate For Username
+        function userValidate() {
+            // the username if was Empty = Error
+            if (!user.value) {
+                userError.style.color = "red";
+                userError.innerHTML = "Username is required";
+                return false;
+            }
+            // the username if was less from length 3 = Error
+            if (user.value.length < 3) {
+                userError.style.color = "red";
+                userError.innerHTML = "Username must be more from 2";
+                return false;
+            }
+            // the username if was mroe from length 3 = valid
+            if (user.value.length > 2) {
+                userError.style.color = "var(--color-primary)";
+                userError.innerHTML = "Username is valid";
+                return true;
+            }
+        }
+
+        // Function Validate For Password
+        function passValidate() {
+            // the password if was Empty = Error
+            if (!pass.value) {
+                passError.style.color = "red";
+                passError.innerHTML = "Password is required";
+                return false;
+            }
+            // the password if was less from 8 = Error
+            if (pass.value.length < 8) {
+                passError.style.color = "red";
+                passError.innerHTML = "Password is less from 8";
+                return false;
+            }
+            // the password if was more from 8 = valid
+            if (pass.value.length >= 8) {
+                passError.style.color = "var(--color-primary)";
+                passError.innerHTML = "Password is valid";
+                return true;
+            }
+        }
+
+        // Function For btn Submit
+        function submitValidate() {
+            if (!emailValidate() || !phoneValidate() || !userValidate() || !passValidate()) {
+                submitError.style.color = "red";
+                submitError.innerHTML = "Please Enter Date";
+                return false;
+            } else {
+                submitError.style.color = "var(--color-primary)";
+                submitError.innerHTML = `Data ok`;
+                setTimeout(() => {
+                    location.href = "login.html";
+                }, 500);
+                return true;
+
+            }
+        }
+
+        let form = document.querySelector("#form");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            submitValidate();
+
+        });
+
+
+
+    </script> -->
+
+</body>
+
+</html>
