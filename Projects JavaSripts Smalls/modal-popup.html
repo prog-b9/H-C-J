@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qusetion</title>
+    <!--icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Css Normalize-->
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: 'Cairo', sans-serif;
+
+    }
+
+    body{
+        background-color: #17867b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        padding: 20px;
+        background-color: #fff;
+        /* margin-top: 10px; */
+        text-align: center;
+        transition: 0.4s;
+        position: relative;
+        top: -300px;
+    }
+
+    .container ion-icon{
+        color: #17867b;
+        z-index: 100;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+        transition: 0.2s;
+        background-color: rgba(0 0 0 / 30%);
+        cursor: pointer;
+    }
+    .container ion-icon:hover{
+        transition: 0.2s;
+        background-color: rgba(0 0 0 / 40%);
+    }
+    .container .info h1{
+        border-bottom: 1px solid #333;
+    }
+    .container .info .text{
+        line-height: 1.5;
+    }
+
+    .btn{
+        width: 150px;
+        height: 40px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(100%);
+    }
+
+    
+</style>
+
+<body>
+    <div class="container">
+        <ion-icon class="close" name="close-outline"></ion-icon>
+        <div class="info">
+            <h1>Hello World</h1>
+            <div class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, at nostrum neque consequatur dolor harum dicta? Quam consequatur quia sint vero illum. Enim illum quia nostrum unde aspernatur ullam sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad minus tempora aliquid nisi quisquam ea architecto, culpa esse similique fuga temporibus ipsum. Quae ipsam nisi beatae incidunt possimus qui laudantium!
+            </div>
+        </div>
+        
+    </div>
+
+    <button class="btn">Show Message</button>
+
+    <script>
+     document.querySelector(".btn").onclick = ()=>{
+        document.querySelector(".container").style.top = "100px";
+     };
+     document.querySelector(".close").onclick = ()=>{
+        document.querySelector(".container").style.top = "-300px";
+        document.body.style.background = "#17867b";
+     };
+    </script>
+
+
+</body>
+
+</html>

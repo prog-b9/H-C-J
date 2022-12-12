@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API Maney</title>
+</head>
+<body>
+    <div class="price">
+        <div class="dolar">1000</div>
+        <h1 class="egp">EGY : <span id="egpResult"></span> </h1>
+        <h1 class="sar">SAR : <span id="sarResult"></span> </h1>
+    </div>
+
+    <script>
+        // API => Coins
+        //https://api.currencyfreaks.com/latest?apikey=338d869d35aa495a9b86da9b84345f99
+
+        fetch("https://api.currencyfreaks.com/latest?apikey=338d869d35aa495a9b86da9b84345f99")
+        .then((result) => {
+            let myData = result.json();
+            return myData;
+        }).then((currnt) =>{
+            // currnt.rates => give me all API 
+
+           let dolar = document.querySelector(".dolar").innerHTML;
+            let egp = dolar * currnt.rates["EGP"];
+            let sar = dolar * currnt.rates["SAR"];
+            
+            document.getElementById("egpResult").innerHTML = egp + " EGP";
+            document.getElementById("sarResult").innerHTML = sar +" SAR";
+            document.querySelectorAll("span").forEach((e) => {
+                e.style.fontWeight = "normal";
+                e.style.fontSize = "20px";
+            });
+
+        })
+    </script>
+</body>
+</html>

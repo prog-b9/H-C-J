@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>learning JS</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: 'Cairo', sans-serif;
+
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        background-color: #009688;
+        padding: 20px 40px;
+        /* min-height: 00px; */
+        width: 70%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .container h1 {
+        text-align: center;
+        text-transform: capitalize;
+        color: #fff;
+        letter-spacing: 2px;
+    }
+
+    .container textarea {
+        width: 100%;
+        resize: none;
+        padding: 10px;
+        height: 300px;
+        outline: none;
+        overflow: scroll;
+    }
+
+    .container button {
+        width: 250px;
+        height: 50px;
+        margin-top: 10px;
+        outline: none;
+        border: none;
+        font-size: 25px;
+        background-color: #fff;
+        color: #009688;
+        font-weight: bold;
+        transition: 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+    }
+
+    .container .count-textarea {
+        margin-right: 5px;
+    }
+
+    .container button:hover {
+        background-color: #17867b;
+        color: #fff;
+        transition: 0.3s;
+        box-shadow: 1px 1px 5px rgba(0 0 0 /50%);
+        border-radius: 3px;
+    }
+
+    @media (max-width:768px) {
+        .container {
+            width: 100%;
+            padding: 10px;
+            border-radius: 0;
+        }
+
+        .container h1 {
+            font-size: 17px;
+        }
+
+        .container button {
+            width: 100%;
+            height: 40px;
+            font-size: 17px;
+
+        }
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <h1>text formatter</h1>
+        <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+        <button class="btn">
+            <div class="count-textarea">0</div> : Letters
+        </button>
+        <button class="btn">
+            <div class="count-textarea-word">0</div> : Words
+        </button>
+        <button class="upper btn">Upper-Case</button>
+        <button class="lower btn">Lower-Case</button>
+        <button class="clear btn">Clear-Word</button>
+    </div>
+
+
+    <script>
+        let textarea = document.getElementById("textarea");
+        let btn = document.querySelectorAll(".btn"); // this is variable for button
+        let upper = document.querySelector(".upper");
+        let lower = document.querySelector(".lower");
+        let clear = document.querySelector(".clear");
+        let countLetter = document.querySelector(".count-textarea");
+        let countWord = document.querySelector(".count-textarea-word");
+        // this is add Attribute for textarea
+        textarea.setAttribute("placeholder", "Write Your Message...");
+        // This Is Counter Letters
+        textarea.onkeyup = () => {
+            countLetter.innerHTML = textarea.value.length;
+            let ReCountWord = /\w+/gi;
+            let arrWord = textarea.value.match(ReCountWord).length;
+            countWord.innerHTML = arrWord;
+
+            return true;
+        };
+        // this is function run the button
+        function formatText(index) {
+            switch (
+            index // this sitch if click in index (1) = upperCase / index (2) = LowerCase
+            ) {
+                case 2:
+                    textarea.value = textarea.value.toUpperCase();
+                    break;
+                case 3:
+                    textarea.value = textarea.value.toLowerCase();
+                    break;
+                case 4:
+                    textarea.value = "";
+                    countLetter.innerHTML = 0;
+                    countWord.innerHTML = 0;
+                    break;
+            }
+        }
+        // forEach because pass on button
+        btn.forEach(function (e, index) {
+
+            e.addEventListener("click", () => {
+                formatText(index); // this is function For UpperCase and LowerCase and clearWord
+            });
+        });
+
+
+    </script>
+
+</body>
+
+</html>
