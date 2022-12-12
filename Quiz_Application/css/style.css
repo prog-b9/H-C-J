@@ -1,0 +1,282 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+:root {
+    --main-color: #0075ff;
+    --light-grey-color: #eee;
+    --redius: 4px;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Start Colors Options */
+.colors {
+    width: 300px;
+    height: 140px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+    left: -300px;
+    top: 50px;
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.colors.show-colors{
+    left: 0;
+    transition: 0.3s;
+}
+
+.colors .colors-content {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colors .colors-content li {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50px;
+    margin: 0 5px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+.colors .colors-content li.active {
+    opacity: 1;
+}
+
+.colors .colors-content li:nth-child(1) {
+    background-color: #0075ff;
+}
+
+.colors .colors-content li:nth-child(2) {
+    background-color: #e91e63;
+}
+
+.colors .colors-content li:nth-child(3) {
+    background-color: #3f51b5;
+}
+
+.colors .colors-content li:nth-child(4) {
+    background-color: #ff9800;
+}
+
+.colors .colors-content li:nth-child(5) {
+    background-color: #4caf50;
+}
+
+.colors .options-color{
+    background-color: #eee;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.colors .options-color img{
+    max-width: 100%;
+}
+
+/* End Colors Options*/
+/************ Start Container **************/
+.quiz-app {
+    background-color: var(--light-grey-color);
+    padding: 15px;
+    margin: 100px auto;
+    width: 800px;
+}
+
+/* Start Header */
+.quiz-app .quiz-info {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    text-transform: capitalize;
+    border-radius: var(--redius);
+    font-weight: bold;
+}
+
+.quiz-app .quiz-info span {
+    color: var(--main-color);
+}
+
+/* End Header */
+/* Start  Question Area*/
+.quiz-app .question-area {
+    background-color: #fff;
+    padding: 10px;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* End  Question Area*/
+/* Start  Answer Area*/
+.quiz-app .answer-area {
+    background-color: #fff;
+    padding: 15px;
+}
+
+.quiz-app .answer-area .answer {
+    background-color: #c2c2c22b;
+    min-height: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.quiz-app .answer-area .answer:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+.quiz-app .answer-area .answer input[type="radio"] {
+    cursor: pointer;
+    appearance: none;
+}
+
+/* if click on the label */
+.quiz-app .answer-area .answer input[type="radio"]:checked+label {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.quiz-app .answer-area .answer label {
+    margin-left: 40px;
+    cursor: pointer;
+    user-select: none;
+    word-wrap: break-word;
+    line-height: 1.3;
+    position: relative;
+}
+.quiz-app .answer-area .answer input[type="radio"] + label::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgb(193, 193, 193);
+    position: absolute;
+    left: -35px;
+    border-radius: 3px;
+}
+.quiz-app .answer-area .answer input[type="radio"]:checked + label::before{
+    border: 2px solid var(--main-color);
+    background-color: var(--main-color);
+}
+.quiz-app .answer-area .answer label.active {
+    color: var(--main-color);
+}
+
+/* End  Answer Area*/
+/* Start  submit*/
+.quiz-app .submit {
+    width: 100%;
+    margin-top: 10px;
+    background-color: var(--main-color);
+    border: none;
+    outline: none;
+    padding: 15px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: var(--redius);
+    transition: 0.3s;
+}
+
+.quiz-app .submit:hover {
+    /* background-color: #035fc9; */
+    transition: 0.3s;
+}
+
+/* End  submit*/
+/*-----Start Bullets-----*/
+.quiz-app .bullets {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 15px;
+    border-bottom: 3px solid var(--main-color);
+}
+
+/* Start Points */
+.quiz-app .bullets .points {
+    display: flex;
+    list-style: none;
+}
+
+.quiz-app .bullets .points li {
+    width: 20px;
+    height: 20px;
+    background-color: var(--light-grey-color);
+    margin: 0 3px;
+    border-radius: 50px;
+}
+
+.quiz-app .bullets .points li.active {
+    background-color: var(--main-color);
+}
+
+/* End Points */
+/* Start Results */
+.quiz-app .results span {
+    color: #fff;
+    font-weight: bold;
+    padding: 0 5px;
+    margin-top: 10px;
+    text-transform: capitalize;
+    border-radius: var(--redius);
+}
+
+.quiz-app .results .bad {
+    background-color: red;
+}
+
+.quiz-app .results .good {
+    background-color: orange;
+}
+
+.quiz-app .results .perfect {
+    background-color: green;
+}
+
+/* End Results */
+/* Start Now Quesion */
+.quiz-app .now-question {
+    margin-top: 10px;
+    font-weight: bold;
+    padding: 0 5px;
+    text-transform: capitalize;
+    border-radius: var(--redius);
+}
+
+.quiz-app .now-question .question-number {
+    color: var(--main-color);
+    padding: 2px;
+}
+
+/* End Now Quesion */
+
+
+/*------End Bullets -------*/
+
+/************ End Container **************/
