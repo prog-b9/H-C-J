@@ -1,0 +1,221 @@
+///////////////////////login//////////////////////
+ <!-- <div class="login">
+        <div class="container">
+            <div class="col">
+                <img class="img-logo" src="images/logo.png" alt="">
+                <form action="#">
+                    <div class="boxInput">
+                        <input type="text" placeholder="الإيميل">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+                    <div class="boxInput">
+                        <input type="text"  placeholder="الرقم السري">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </div>
+                    <button>دخول</button>
+                    <div class="footerLogin">
+                        <span>لاتملك حساب ؟</span>
+                        <span><a href="register.html">تسجيل</a></span>
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+                <h1>تسجيل الدخول</h1>
+                <img class="img-teacher" src="images/teacher.png" alt="">
+            </div>
+        </div>
+    </div> -->
+<!-- 
+    <footer>
+        <div class="container">
+            <div class="share-media">
+                <h3>للتواصل مع المنصة : </h3>
+                <ul>
+                    <li><a href="#"><img src="images/whatsapp.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/mail (1).png" alt=""></a></li>
+                    <li><a href="#"><img src="images/github.png" alt=""></a></li>
+                </ul>
+            </div>
+            <img src="images/logo.png" alt="">
+        </div>
+        <h3>جميع الحقوق محفوظة &copy; 2023</h3>
+    </footer> -->
+
+////////////////////register/////////////////////
+ <!-- <div class="login">
+        <div class="container">
+            <div class="col">
+                <img class="img-logo" src="images/logo.png" alt="">
+                <form action="#">
+                    <div class="boxInput">
+                        <input type="text" placeholder="الإيميل">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+                    <div class="boxInput">
+                        <input type="tel"  placeholder="رقم الجوال">
+                        <ion-icon name="call-outline"></ion-icon>
+                    </div>
+                    <div class="boxInput">
+                        <input type="password"  placeholder="الرقم السري">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </div>
+                    <button>إنشاء الحساب</button>
+                    <div class="footerLogin">
+                        <span>تملك حساب</span>
+                        <span><a href="login.html">نعم</a></span>
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+                <h1>إنشاء حسابك</h1>
+                <img class="img-teacher" src="images/teacher.png" alt="">
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <footer>
+        <div class="container">
+            <div class="share-media">
+                <h3>للتواصل مع المنصة : </h3>
+                <ul>
+                    <li><a href="#"><img src="images/whatsapp.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/mail (1).png" alt=""></a></li>
+                    <li><a href="#"><img src="images/github.png" alt=""></a></li>
+                </ul>
+            </div>
+            <img src="images/logo.png" alt="">
+        </div>
+        <h3>جميع الحقوق محفوظة &copy; 2023</h3>
+    </footer> -->
+
+////////////////////////////pageHome////////////////////////////
+
+  <!-- <header>
+        <div class="container">
+            <ul>
+                <li><a href="#">الصفحة الرئيسة</a></li>
+                <li><a href="#">المدرسين الخصوصيين</a></li>
+                <li class="account"><a href="#" class="account">BasilMohammed</a></li>
+            </ul>
+            <img src="images/logo.png" alt="">
+        </div>
+    </header>
+
+    <div class="landing">
+        <div class="container">
+            <img src="images/teacher.png" alt="">
+            <p>منصة لأختيار مدرس خصوصي يساعدك في فهم المواد التي تحتاجها</p>
+        </div>
+    </div>
+
+    <div class="teachers">
+        <div class="container">
+            <h3>المدرسين : </h3>
+            <div class="container-content">
+                <div class="box">
+                    <div class="head">
+                        <div class="material">
+                            <h4 class="mater-ar">الرياضيات</h4>
+                            <h4 class="mater-en">Math</h4>
+                        </div>
+                        <img src="images/profile.png" alt="">
+                    </div>
+                    <div class="center">
+                        <span>الاستاذ : </span> <span class="teacher-name">جمال علي</span>
+                    </div>
+                    <button>إختيار</button>
+                </div>
+                <div class="box">
+                    <div class="head">
+                        <div class="material">
+                            <h4 class="mater-ar">الرياضيات</h4>
+                            <h4 class="mater-en">Math</h4>
+                        </div>
+                        <img src="images/profile.png" alt="">
+                    </div>
+                    <div class="center">
+                        <span>الاستاذ : </span> <span class="teacher-name">محمد خالد</span>
+                    </div>
+                    <button>إختيار</button>
+                </div>
+                <div class="box">
+                    <div class="head">
+                        <div class="material">
+                            <h4 class="mater-ar">الرياضيات</h4>
+                            <h4 class="mater-en">Math</h4>
+                        </div>
+                        <img src="images/profile.png" alt="">
+                    </div>
+                    <div class="center">
+                        <span>الاستاذ : </span> <span class="teacher-name">سعد عبدالرحمن</span>
+                    </div>
+                    <button>إختيار</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <footer>
+        <div class="container">
+            <div class="share-media">
+                <h3>للتواصل مع المنصة : </h3>
+                <ul>
+                    <li><a href="#"><img src="images/whatsapp.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/mail (1).png" alt=""></a></li>
+                    <li><a href="#"><img src="images/github.png" alt=""></a></li>
+                </ul>
+            </div>
+            <img src="images/logo.png" alt="">
+        </div>
+        <h3>جميع الحقوق محفوظة &copy; 2023</h3>
+    </footer> -->
+
+//////////////////////payPage////////////////////////////
+
+ <!-- <header>
+        <div class="container">
+            <ul>
+                <li><a href="#">الصفحة الرئيسة</a></li>
+                <li><a href="#">المدرسين الخصوصيين</a></li>
+                <li class="account"><a href="#" class="account">BasilMohammed</a></li>
+            </ul>
+            <img src="images/logo.png" alt="">
+        </div>
+    </header>
+
+    <div class="order">
+        <div class="container">
+            <div class="head">
+                <div class="material">
+                    <h4 class="mater-ar">الرياضيات</h4>
+                    <h4 class="mater-en">Math</h4>
+                </div>
+                <img src="images/profile.png" alt="">
+            </div>
+            <div class="center">
+                <span>الاستاذ : </span> <span class="teacher-name">جمال علي</span>
+            </div>
+            <div class="details">
+                <h4 >نبذة عن الاستاذ : </h4>
+                <p>انا المدرس محمد علي تخصصي رياضيات ماخذ شهادة في التدريس واستطيع ان ادرس طلاب الابتدائي و المتوسط والثانوي </p>
+            </div>
+            <button>التواصل مع المدرس</button>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="share-media">
+                <h3>للتواصل مع المنصة : </h3>
+                <ul>
+                    <li><a href="#"><img src="images/whatsapp.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/mail (1).png" alt=""></a></li>
+                    <li><a href="#"><img src="images/github.png" alt=""></a></li>
+                </ul>
+            </div>
+            <img src="images/logo.png" alt="">
+        </div>
+        <h3>جميع الحقوق محفوظة &copy; 2023</h3>
+    </footer> -->
+//////////////////////////////////////////////////////////
