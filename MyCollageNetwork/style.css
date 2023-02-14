@@ -23,6 +23,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
     margin: 0 auto;
     margin-top: 100px;
+     margin-bottom: 100px;
     border-radius: 10px;
     box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
