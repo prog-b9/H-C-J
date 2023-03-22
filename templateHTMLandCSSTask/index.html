@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS Normolize-->
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <!-- Google Font (Roboto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <!-- Bootstarp -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <!-- Start Icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- light boxs -->
+  <!-- write title -->
+  <title>Design Task</title>
+  <!-- CSS Style Custom-->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+
+<body>
+
+  <!-- State Landing -->
+  <div class="position-relative" id="landing">
+    <!-- Start Header -->
+    <header class="container">
+      <!-- <nav class="container mt-4 navbar navbar-expand-lg d-flex justify-content-around position-absolute text-white">
+        <div class="container">
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="images/menu.png" class="me-3" alt="" />
+            <div class="fw-bold">Constructor</div>
+          </div>
+          <div class="d-flex align-items-center opacity-75">
+            <img src="images/search.png" style="width: 20px; height: 20px" class="me-3" alt="" />
+            <input placeholder="Search..." class="form-control shadow-none border-0 opacity" focus="color:#fff"/>
+          </div>
+          <div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item me-3">
+                  <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item me-3">
+                  <a class="nav-link text-white" href="#">Services</a>
+                </li>
+
+                <li class="nav-item me-3">
+                  <a class="nav-link text-white" href="#">Reviews </a>
+                </li>
+                <li class="nav-item me-3">
+                  <a class="nav-link text-white" href="#">Contacts</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-1">
+            <div class="fw-">Get In Touch</div>
+          </div>
+        </div>
+      </nav> -->
+      <div class="navbar navbar-expand-lg ">
+        <div class="container px-3 d-flex justify-content-between" style="z-index: 1;">
+          <div>
+            <a class="navbar-brand text-white fw-bold" href="#">Constructor</a>
+          </div>
+          <div>
+            <button class="navbar-toggler bg-white shadow-none" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse p-3 header-container-items" id="navbarSupportedContent">
+            <div class="d-flex align-items-center">
+              <img src="images/search.png" style="width: 20px; height: 20px" class="me-3" alt="" />
+              <input class="form-control me-2 border-0  input-search text-white" type="search" placeholder="Search..."
+                aria-label="Search">
+            </div>
+            <ul class="navbar-nav my-2 ">
+              <li class="nav-item  rounded-2 me-3  w-100">
+                <a class="nav-link p-2  active text-white fw-bold" style="font-size: 13px;" aria-current="page"
+                  href="#">Home</a>
+              </li>
+              <li class="nav-item  rounded-2 me-3">
+                <a class="nav-link p-2  text-white fw-bold" style="font-size: 13px;" href="#">Services</a>
+              </li>
+
+              <li class="nav-item  rounded-2 me-3">
+                <a class="nav-link p-2  text-white fw-bold" style="font-size: 13px;" href="#">Reviews </a>
+              </li>
+              <li class="nav-item  rounded-2 me-3">
+                <a class="nav-link p-2  text-white fw-bold" style="font-size: 13px;" href="#">Contacts</a>
+              </li>
+            </ul>
+            <div class="d-flex text-center header-container-item-end ms-auto">
+              <button class="border-0 fw-bold text-white" style="font-size: 14px;">Get In
+                Touch</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Start Wavy  -->
+    <div class="custom-shape-divider-bottom-1679053119">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+    <!-- End Wavy -->
+
+    <!-- Start Button Inside Wavy -->
+    <div class="position-absolute" style="bottom: -50px; left:50% ; transform: translate(-50%,-50%);">
+      <button class="rounded-5 border-0 btn bg-white fw-bold p-3 px-4"
+        style="color: var(--blue-small-color); font-size: 14px;">Show
+        More</button>
+    </div>
+    <!-- End Button Inside Wavy -->
+
+    <!-- Start landing Of Content-->
+    <div class="position-absolute top-50 text-white" id="landing-content"
+      style="left: 50%; transform: translate(-50%,-50%);">
+      <div>
+        <button class="btn rounded-5 fw-bold text-white"
+          style="background-color: var(--orange-color); font-size: 12px;">REAL ESTATE</button>
+      </div>
+      <div>
+        <div class="landing-content-text text-center">Invest on Real Estate with
+          Our Company</div>
+      </div>
+      <div class="" id="landing-content-address">
+        <div class=" mt-3" id="landing-content-address-item">
+          <img src="images/icon-pointer.png" class="me-4" alt="icon-pointer">
+          <div class="" style="font-size: 13px;letter-spacing: 0px; font-weight: 700;">
+            225 S 1st St Brooklyn, NY 11211
+          </div>
+        </div>
+        <div class=" mt-3" id="landing-content-address-item">
+          <img src="images/Icon-call.png" class="me-4" alt="Icon-call">
+          <div class="" style="font-size: 13px;letter-spacing: 0px; font-weight: 700;">(929) 356-0147</div>
+        </div>
+        <div class=" mt-3" id="landing-content-address-item">
+          <img src="images/Icon-mail.png" class="me-4" alt="Icon-mail">
+          <div class="" style="font-size: 13px;letter-spacing: 1px; font-weight: 700;">hotel@gmail.com</div>
+        </div>
+      </div>
+    </div>
+    <!-- End landing Of Content -->
+  </div>
+  <!-- End Landing -->
+
+  <!-- Start Main Special (OUR STORY) -->
+  <div id="main-special" class="text-center col-12">
+    <!-- head -->
+    <div id="head" class="d-inline-block p-1 px-3 rounded-5" style="background-color: var(--green-opacity-color);">
+      <div class="sem-sem-button " style="font-size: 12px; font-weight: 900; color: var(--green-color);">OUR STORY</div>
+    </div>
+    <!-- cneter -->
+    <div id="center" class="position-relative">
+      <div class="center-bg-text">OUR STORY</div>
+      <div class="position-absolute center-sm-text fw-bold">
+        We Will Find the Best Option
+      </div>
+    </div>
+    <!-- Down -->
+    <div id="down" style=" font-weight: 500;">
+      Real estate is "property consisting of land and the buildings on it, along with its natural resources such as
+      crops, minerals or water, immovable property of this nature; an interest vested in this (also) an item of real
+      property, (more generally) buildings or housing in general.
+    </div>
+  </div>
+  <!-- End Main Special (OUR STORY) -->
+
+  <!-- Start Stats-->
+  <div class="container mt-0">
+    <div class="row m-3 text-center justify-content-center">
+
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12  my-2">
+        <div class=" bg-white py-5 rounded-2 d-flex flex-column justify-content-around align-items-center"
+          id="style-shadow">
+          <div class="d-flex " style="color: var(--blue-big-color); font-size: 30px; font-weight: 500;">
+            <div class="me-2">15</div> Years
+          </div>
+          <div class="mt-3" style="color: var(--blue-opacity-color);">In Business</div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12  my-2">
+        <div class="bg-white py-5 rounded-2 d-flex flex-column justify-content-around align-items-center"
+          id="style-shadow">
+          <div class="d-flex " style="color: var(--blue-big-color); font-size: 30px; font-weight: 500;">
+            <div class="me-2">$1</div>Billion
+          </div>
+          <div class="mt-3" style="color: var(--blue-opacity-color);">Property Brokered</div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12  my-2">
+        <div class="bg-white   py-5 rounded-2 d-flex flex-column justify-content-around align-items-center"
+          id="style-shadow">
+          <div class="d-flex " style="color: var(--blue-big-color); font-size: 30px; font-weight: 500;">
+            10,000
+          </div>
+          <div class="mt-3" style="color: var(--blue-opacity-color);">Transactions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Stats-->
+  <!-- Start Main Special (SERVICES) -->
+  <div id="main-special" class="text-center col-12">
+    <!-- head -->
+    <div id="head" class="d-inline-block p-1 px-3 rounded-5" style="background-color: var(--dark-blue-opacity-color);">
+      <div class="sem-sem-button " style="font-size: 12px; font-weight: 900; color: var(--dark-blue-color);">SERVICES
+      </div>
+    </div>
+    <!-- cneter -->
+    <div id="center" class="position-relative">
+      <div class="center-bg-text">SERVICES</div>
+      <div class="position-absolute center-sm-text fw-bold">
+        Services for Maximum Efficiency
+      </div>
+    </div>
+    <!-- Down -->
+    <div id="down" style=" font-weight: 500;">
+      We have developed a unique space where you can work and create. We thought of everything to the smallest detail.
+      You will be able to conduct your business, conduct meetings, meetings
+    </div>
+  </div>
+  <!-- End Main Special (SERVICES)-->
+
+  <!-- Start Services -->
+  <div class="container my-5">
+    <div class="row m-auto gap-5" id="services-row">
+
+      <div class="col">
+        <div class="d-flex flex-column align-items-center justify-content-evenly" style="min-height: 18vh;">
+          <div class="bg-white p-4 rounded-circle" id="style-shadow">
+            <img src="./images/icon-house.png" style="width: 44px; height:40px;" alt="icon-house">
+          </div>
+          <div class="mt-4">House</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="d-flex flex-column align-items-center justify-content-evenly" style="min-height: 18vh;">
+          <div class="bg-white p-4 rounded-circle" id="style-shadow">
+            <img src="./images/icon-appartament.png" style="width: 44px; height:40px;" alt="icon-house">
+          </div>
+          <div class="mt-4">Appartament</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="d-flex flex-column align-items-center justify-content-evenly" style="min-height: 18vh;">
+          <div class="bg-white p-4 rounded-circle" id="style-shadow">
+            <img src="./images/icon-office.png" style="width: 44px; height:40px;" alt="icon-house">
+          </div>
+          <div class="mt-4">Office</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="d-flex flex-column align-items-center justify-content-evenly" style="min-height: 18vh;">
+          <div class="bg-white p-4 rounded-circle" id="style-shadow">
+            <img src="./images/icon-warehouse.png" style="width: 44px; height:40px;" alt="icon-house">
+          </div>
+          <div class="mt-4">Warehouse</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="d-flex flex-column align-items-center justify-content-evenly" style="min-height: 18vh;">
+          <div class="bg-white p-4 rounded-circle" id="style-shadow">
+            <img src="./images/icon-parking.png" style="width: 44px; height:40px;" alt="icon-house">
+          </div>
+          <div class="mt-4">Parking</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Services -->
+
+  <!-- Start Main Special (DEALS) -->
+  <div id="main-special" class="text-center col-12">
+    <!-- head -->
+    <div id="head" class="d-inline-block p-1 px-3 rounded-5" style="background-color: var(--orange-opacity-color);">
+      <div class="sem-sem-button " style="font-size: 12px; font-weight: 900; color: var(--orange-color);">DEALS
+      </div>
+    </div>
+    <!-- cneter -->
+    <div id="center" class="position-relative">
+      <div class="center-bg-text">DEALS</div>
+      <div class="position-absolute center-sm-text fw-bold">
+        Our Best Deals for Today
+      </div>
+    </div>
+    <!-- Down -->
+    <div id="down" style=" font-weight: 500;">
+      Real estate is "property consisting of land and the buildings on it, along with its natural resources such as
+      crops, minerals or water, immovable property of this nature
+    </div>
+  </div>
+  <!-- End Main Special (SERVICES)-->
+
+  <!-- Start Deals -->
+  <div class="container my-5">
+    <!-- Start taps -->
+    <div class="d-flex justify-content-evenly nav navbar fw-bold" id="deals-taps"
+      style="color:var( --blue-details-color)">
+      <li class="active">All</li>
+      <li>House</li>
+      <li>Appartament</li>
+      <li>Office</li>
+      <li>Warehouse</li>
+      <li>Parking</li>
+      <li>Commercial</li>
+    </div>
+    <!-- End taps -->
+
+
+    <!-- Start Imgs boxs -->
+    <div class="row gap-5 d-flex justify-content-center p-0" style="margin: 100px 20px;">
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item deals-box-item-up animated parking"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/parking-01.jpg " class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-parking">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Cars Parking</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated parking"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/parking-02.jpg " class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-parking">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Cars Parking</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated parking"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/parking-03.jpg " class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-parking">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Cars Parking</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated commercial"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/commercial-01.jpg " class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-commercial">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern Commercial</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated commercial"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/commercial-02.jpg " class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-commercial">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern Commercial</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated commercial"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/commercial-03.jpg " class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-commercial">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern Commercial</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated appartament"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/deals-img-appartament-01.png " class="card-img-top rounded-top"
+          style="width:100% ; height:200px" alt="img-appartament">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern appartament</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated appartament"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/deals-img-appartament-02.png " class="card-img-top rounded-top"
+          style="width:100% ; height:200px" alt="img-appartament">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern appartament</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated appartament"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/deals-img-appartament-03.png " class="card-img-top rounded-top"
+          style="width:100% ; height:200px" alt="img-appartament">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern appartament</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated office"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/office-01.jpg" class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-office">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern Office</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated office"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/office-02.jpg" class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-office">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern Office</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated office"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/office-03.jpg" class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-office">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern Office</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated office"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/office-04.jpg" class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-office">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern Office</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated house"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/deals-img-house-01.png " class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-house">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern Glass House</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated house"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/deals-img-house-02.png " class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-house">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern Glass House</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated house"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/deals-img-house-03.png " class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-house">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern Glass House</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated house"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/deals-img-house-04.png " class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-house">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern Glass House</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated house"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/deals-img-house-05.png " class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-house">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern Glass House</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated house"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/deals-img-house-06.png " class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-house">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern Glass House</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated warehouse"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/Warehouse-01.jpg " class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-Warehouse">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern Glass House</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated warehouse"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/Warehouse-02.jpg " class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-Warehouse">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern Glass House</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div
+        class="card col-lg-3 col-md-5 col-sm-5 p-0 border-0 rounded-3 p-0 position-relative deals-box-card-item animated warehouse"
+        id="style-shadow">
+        <!-- Start Like -->
+        <div class="position-absolute p-2 rounded-circle deals-box-card-item-like"
+          style="background-color: var(--orange-color); right: 20px; top: 40px;">
+          <img src="images/icon-like.png" alt="">
+        </div>
+        <!-- End Like -->
+        <!-- Start View -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 20px; top: 25px;">
+          <img src="images/icon-view.png" width="20px" height="15px" alt="">
+          <div class="ms-2" style="font-size: 11px;">65</div>
+        </div>
+        <!-- End View -->
+        <!-- Start Num -->
+        <div class="position-absolute rounded-2  d-flex justify-content-between align-items-center text-white p-2"
+          style="background-color: var(--black-opacity-color); left: 100px; top: 25px;">
+          <div style="font-size: 11px;">1995</div>
+        </div>
+        <!-- End Num -->
+        <img src="images/Warehouse-03.jpg " class="card-img-top rounded-top" style="width:100% ; height:200px"
+          alt="img-Warehouse">
+        <div class="card-body deals-box-card-body-item">
+          <div class="card-title fs-5" style="color:var(--blue-big-color); font-weight: 900;">Modern Glass House</div>
+          <div class="card-title fs-5" style="color:var(--blue-big-color);font-weight: 900;">$ 1,625,000</div>
+          <div class="fw-bold mt-4" style="color:var(--blue-opacity-color); font-size: 13px;">
+            <div class="card-text">14 Patrick Brem Ct. Mahwah, NJ07430</div>
+            <div class="card-text d-flex mt-3">
+              <div class="beds">3 Beds</div>
+              <div class="mx-3">-</div>
+              <div class="baths"> 2 baths</div>
+              <div class="mx-3">-</div>
+              <div class="sqft">3,450 sqft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <!-- End Imgs boxs -->
+  </div>
+  <!-- End Deals -->
+  <!-- Start js For Deals -->
+  <script>
+    let dealsTaps = document.querySelectorAll("#deals-taps li");
+    let dealsBoxs = document.querySelectorAll(".deals-box-card-item");
+    let dealsBoxsHouse = document.querySelectorAll(".house");
+    let dealsBoxsAppartament = document.querySelectorAll(".appartament");
+    let dealsBoxsOffice = document.querySelectorAll(".office");
+    let dealsBoxsWarehouse = document.querySelectorAll(".warehouse");
+    let dealsBoxsParking = document.querySelectorAll(".parking");
+    let dealsBoxsCommercial = document.querySelectorAll(".commercial");
+    // this is function clear active on Elements
+    const removeActive = () => {
+      dealsTaps.forEach((item) => {
+        item.classList.remove("active");
+      });
+    }
+
+    const blockOrNone = (ele, property) => {
+      ele.forEach((e) => {
+        e.style.display = property;
+      });
+    }
+
+
+    // Seenario
+    //#01#// => loop on element taps
+    //#02#// => click on the element tap
+    //#03#// => clicked on the element it does two things :
+    // 3.A => clear active on element all
+    // 3.B => add active on element pecked
+
+    dealsBoxs.forEach((ee, i) => {
+
+      // deals-box-item-down
+      // deals-box-item-up
+      // deals-box-item-normal
+
+      if (i % 2 == 0) {
+
+        // space  transform : translateY(-40px)
+        ee.classList.add("deals-box-item-up");
+        // space between boxs   margin-bottom: 30px; margin-top: 20px;
+        ee.classList.add("spaceBetweenBoxs");
+      }
+
+
+
+
+
+
+    });
+    dealsTaps.forEach((e, index) => {
+
+      e.addEventListener("click", (item, i) => {
+        if (item.target.className !== "active") {
+          removeActive(e);
+          item.target.classList.add("active")
+        }
+        switch (index) {
+          case 0:
+            blockOrNone(dealsBoxsHouse, "block");
+            blockOrNone(dealsBoxsAppartament, "block");
+            blockOrNone(dealsBoxsOffice, "block");
+            blockOrNone(dealsBoxsWarehouse, "block");
+            blockOrNone(dealsBoxsParking, "block");
+            blockOrNone(dealsBoxsCommercial, "block");
+
+            break;
+          case 1:
+            blockOrNone(dealsBoxsHouse, "block");
+            blockOrNone(dealsBoxsAppartament, "none");
+            blockOrNone(dealsBoxsOffice, "none");
+            blockOrNone(dealsBoxsWarehouse, "none");
+            blockOrNone(dealsBoxsParking, "none");
+            blockOrNone(dealsBoxsCommercial, "none");
+            break;
+          case 2:
+            blockOrNone(dealsBoxsAppartament, "block");
+            blockOrNone(dealsBoxsHouse, "none");
+            blockOrNone(dealsBoxsOffice, "none");
+            blockOrNone(dealsBoxsWarehouse, "none");
+            blockOrNone(dealsBoxsParking, "none");
+            blockOrNone(dealsBoxsCommercial, "none");
+            break;
+          case 3:
+            blockOrNone(dealsBoxsOffice, "block");
+            blockOrNone(dealsBoxsHouse, "none");
+            blockOrNone(dealsBoxsAppartament, "none");
+            blockOrNone(dealsBoxsWarehouse, "none");
+            blockOrNone(dealsBoxsParking, "none");
+            blockOrNone(dealsBoxsCommercial, "none");
+            break;
+          case 4:
+            blockOrNone(dealsBoxsWarehouse, "block");
+            blockOrNone(dealsBoxsHouse, "none");
+            blockOrNone(dealsBoxsAppartament, "none");
+            blockOrNone(dealsBoxsOffice, "none");
+            blockOrNone(dealsBoxsParking, "none");
+            blockOrNone(dealsBoxsCommercial, "none");
+            break;
+          case 5:
+            blockOrNone(dealsBoxsParking, "block");
+            blockOrNone(dealsBoxsHouse, "none");
+            blockOrNone(dealsBoxsAppartament, "none");
+            blockOrNone(dealsBoxsOffice, "none");
+            blockOrNone(dealsBoxsWarehouse, "none");
+            blockOrNone(dealsBoxsCommercial, "none");
+            break;
+          case 6:
+            blockOrNone(dealsBoxsCommercial, "block");
+            blockOrNone(dealsBoxsHouse, "none");
+            blockOrNone(dealsBoxsAppartament, "none");
+            blockOrNone(dealsBoxsOffice, "none");
+            blockOrNone(dealsBoxsWarehouse, "none");
+            blockOrNone(dealsBoxsParking, "none");
+            break;
+          default:
+            break;
+        }
+      });
+    });
+  </script>
+  <!-- End js For Deals -->
+
+  <!-- Start Main Special (SERVICES) -->
+  <div id="main-special" class="text-center col-12">
+    <!-- head -->
+    <div id="head" class="d-inline-block p-1 px-3 rounded-5" style="background-color: var(--dark-blue-opacity-color);">
+      <div class="sem-sem-button " style="font-size: 12px; font-weight: 900; color: var(--dark-blue-color);">SERVICES
+      </div>
+    </div>
+    <!-- cneter -->
+    <div id="center" class="position-relative">
+      <div class="center-bg-text">SERVICES</div>
+      <div class="position-absolute center-sm-text fw-bold">
+        Services for Maximum Efficiency
+      </div>
+    </div>
+    <!-- Down -->
+    <div id="down" style=" font-weight: 500;">
+      We have developed a unique space where you can work and create. We thought of everything to the smallest detail.
+      You will be able to conduct your business, conduct meetings, meetings
+    </div>
+  </div>
+  <!-- End Main Special (SERVICES)-->
+  <!-- Start TestImonials -->
+  <div class="container my-5">
+    <div class="row text-start d-flex justify-content-center m-2">
+      <div class="col-lg-3 col-sm-5  mt-2 d-flex flex-column justify-content-around align-items-start">
+        <div class="bg-white p-4 py-5 rounded-2" id="style-shadow">
+          <div class="d-flex " style="color: var(--blue-details-color); font-size: 13px; font-weight: 500;">
+            Thank you very much for the house found. This is an ideal option for our family at the location and price.
+            The
+            company employs real professionals who will always.
+          </div>
+        </div>
+        <div class="d-flex align-items-center mt-4 ms-4">
+          <div class="rounded-circle "
+            style="width: 50px; height: 50px; overflow: auto; background-color: var(--perpole-opacity-color-test);">
+            <img src="images/TestImonials-img-01.png" style="overflow: hidden;" alt="TestImonials-img">
+          </div>
+          <div class="ms-4 fw-bold">
+            <div style="color: var(--blue-big-color); font-size: 14px;">Herbert Lindsey</div>
+            <div style="color: var(--blue-opacity-color);font-size: 12px;">New York, USA</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3  col-sm-5  mt-2 d-flex flex-column justify-content-around align-items-start">
+        <div class="bg-white p-4 py-5 rounded-2" id="style-shadow">
+          <div class="d-flex " style="color: var(--blue-details-color); font-size: 13px; font-weight: 500;">
+            A gentleman from New York discovered what he calls an “oversight” on the part of 99.9% of all marketers that
+            allows him to get otherwise paid-for advertising at Google as well as all other search engines.
+          </div>
+        </div>
+        <div class="d-flex align-items-center mt-4 ms-4">
+          <div class="rounded-circle "
+            style="width: 50px; height: 50px; overflow: auto; background-color: var(--orange-opacity-color-test);">
+            <img src="images/TestImonials-img-02.png" style="overflow: hidden;" alt="TestImonials-img">
+          </div>
+          <div class="ms-4 fw-bold">
+            <div style="color: var(--blue-big-color); font-size: 14px;">Noah Russell</div>
+            <div style="color: var(--blue-opacity-color);font-size: 12px;">New York, USA</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3  col-sm-5  mt-2 d-flex flex-column justify-content-around align-items-start">
+        <div class="bg-white p-4 py-5 rounded-2" id="style-shadow">
+          <div class="d-flex " style="color: var(--blue-details-color); font-size: 13px; font-weight: 500;">
+            For many of us, our very first experience of learning about the celestial bodies begins when we saw our
+            first
+            full moon in the sky. It is truly a magnificent view even.
+          </div>
+        </div>
+        <div class="d-flex align-items-center mt-4 ms-4">
+          <div class="rounded-circle "
+            style="width: 50px; height: 50px; overflow: auto; background-color: var(--pink-opacity-color-test);">
+            <img src="images/TestImonials-img-03.png" style="overflow: hidden;" alt="TestImonials-img">
+          </div>
+          <div class="ms-4 fw-bold">
+            <div style="color: var(--blue-big-color); font-size: 14px;">Nellie Griffith</div>
+            <div style="color: var(--blue-opacity-color);font-size: 12px;">New York, USA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End TestImonials -->
+  <!-- Start Main Special (INSTAGRAM) -->
+  <div id="main-special" class="text-center d-flex align-items-center justify-content-around container">
+    <!-- Start Arrow Btn -->
+
+    <!-- Start Arrow Btn Left -->
+    <button
+      class="bg-white main-special-arrow-btn border-0 rounded-circle d-flex justify-content-center align-items-center "
+      id="style-shadow">
+      <img src="images/icon-arrow-left.png" alt="">
+    </button>
+    <!-- End Arrow Btn Left -->
+
+
+
+    <!-- End Arrow Btn -->
+    <div class="col">
+      <div id="head" class="d-inline-block p-1 px-3 rounded-5" style="background-color: var(--green-opacity-color);">
+        <div class="sem-sem-button " style="font-size: 12px; font-weight: 900; color: var(--green-color);">INSTAGRAM
+        </div>
+      </div>
+      <!-- cneter -->
+      <div id="center" class="position-relative">
+        <div class="center-bg-text">INSTA</div>
+        <div class="position-absolute center-sm-text fw-bold">
+          Listen to Our Сustomers @house
+        </div>
+      </div>
+      <!-- Down -->
+      <div id="down" style=" font-weight: 500;">
+        We have developed a unique space where you can work and create. We thought of everything to the smallest detail.
+        You will be able to conduct your business, conduct meetings, meetings
+      </div>
+    </div>
+    <!-- head -->
+    <!-- Start Arrow Btn Right -->
+    <button
+      class="main-special-arrow-btn border-0 bg-white rounded-circle d-flex justify-content-center align-items-center "
+      id="style-shadow">
+      <img src="images/icon-arrow-right.png" alt="">
+    </button>
+    <!-- End Arrow Btn Right -->
+  </div>
+  <!-- End Main Special (INSTAGRAM)-->
+
+  <!-- Start Insta Images -->
+  <div class="my-5 container">
+    <div
+      class=" row m-3 g-4 row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-sm-2 align-items-center justify-content-center"
+      id="container-insta-box">
+
+
+    </div>
+  </div>
+  <!-- End Insta Images -->
+
+  <!-- Start js for Insta Images  -->
+
+  <script>
+
+
+    let arrInstaBox = [
+      "images/insta-img-01.png",
+      "images/insta-img-02.png",
+      "images/insta-img-03.png",
+      "images/insta-img-04.png",
+      "images/insta-img-05.png",
+      "images/insta-img-06.png",
+      "images/insta-img-07.png",
+      "images/insta-img-08.png",
+    ];
+
+
+    // ## create container boxs insta (parent)
+    let instaBoxContainer = document.querySelector("#container-insta-box");
+    arrInstaBox.forEach((e, i) => {
+
+      // ## create container boxs insta (child) style columns
+      let createInstaBoxContainer = document.createElement("div");
+      createInstaBoxContainer.className = `
+      col
+      `;
+      // ## create content boxs insta
+      let createInstaBoxContent = document.createElement("div");
+      createInstaBoxContent.className = `
+      d-flex align-items-center justify-content-center position-relative insta-box  
+      `;
+      // ## create img boxs insta
+
+      let createInstaBoxImg = document.createElement("img");
+      createInstaBoxImg.src = `${arrInstaBox[i]}`;
+
+      createInstaBoxImg.className = "rounded-4";
+      createInstaBoxImg.style.cssText = `
+      max-width: 100%;
+      `;
+
+      createInstaBoxImg.alt = "insta-img";
+
+      // ## create button boxs insta
+      let createInstaBoxButton = document.createElement("button");
+      createInstaBoxButton.className = "position-absolute insta-btn border-0 rounded-circle d-flex align-items-center justify-content-center";
+      createInstaBoxButton.style.cssText = "background-color: var(--black-opacity-color);  width: 87.5px; height:87.5px;";
+
+      // ## create img inside boxs insta
+      let createInstaBoxImgInsideButton = document.createElement("img");
+      createInstaBoxImgInsideButton.src = "images/icon-insta.png";
+
+      let imgs = `
+      <div id="carouselExampleIndicators" class="carousel slide over-lay-content" style="width:700px" data-bs-ride="true">
+        <div class="carousel-indicators rounded-4" style="background-color:#999">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+            aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+            aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+            aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+            aria-label="Slide 8"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active over-lay-img w-100">
+            <img src="images/insta-img-0${i + 1}.png" class="d-block"  alt="...">
+          </div>
+          <div class="carousel-item over-lay-img w-100">
+            <img src="images/insta-img-02.png" class="d-block" alt="...">
+          </div>
+          <div class="carousel-item over-lay-img w-100">
+            <img src="images/insta-img-03.png" class="d-block" alt="...">
+          </div>
+          <div class="carousel-item over-lay-img w-100">
+            <img src="images/insta-img-04.png" class="d-block" alt="...">
+          </div>
+          <div class="carousel-item over-lay-img w-100">
+            <img src="images/insta-img-05.png" class="d-block" alt="...">
+          </div>
+          <div class="carousel-item over-lay-img w-100">
+            <img src="images/insta-img-06.png" class="d-block" alt="...">
+          </div>
+          <div class="carousel-item over-lay-img w-100">
+            <img src="images/insta-img-07.png" class="d-block" alt="...">
+          </div>
+          <div class="carousel-item over-lay-img w-100">
+            <img src="images/insta-img-08.png" class="d-block" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      `;
+
+      let imgsContainer = document.createElement("div");
+      imgsContainer.innerHTML = imgs;
+
+
+      // ## Here appendChild for elements
+      // ### here relation parent and child instaBoxs
+      instaBoxContainer.appendChild(createInstaBoxContainer);
+      createInstaBoxContainer.appendChild(createInstaBoxContent);
+      createInstaBoxContent.appendChild(createInstaBoxImg);
+      createInstaBoxContent.appendChild(createInstaBoxButton);
+      createInstaBoxButton.appendChild(createInstaBoxImgInsideButton);
+
+
+
+
+      // ## here start over-lay
+
+
+      // #### create Over Lay Container
+      let createOverLayContainer = document.createElement("div");
+      createOverLayContainer.className = "over-lay-container";
+
+      // #### create Over Lay Content
+      let createOverLayContent = document.createElement("div");
+      createOverLayContent.className = "over-lay-content";
+
+      // #### create Over Lay Content
+      let createOverLayClose = document.createElement("div");
+      createOverLayClose.className = "over-lay-close bg-danger";
+      createOverLayClose.innerHTML = '<ion-icon name="close-outline"></ion-icon>';
+
+      // #### create Over Lay Content
+      let createOverLayImg = document.createElement("img");
+      createOverLayImg.src = `${arrInstaBox[i]}`;
+      createOverLayImg.className = "over-lay-img";
+
+      // ### here relation parent and child over-lay
+      createOverLayContainer.appendChild(createOverLayContent);
+      createOverLayContent.appendChild(createOverLayClose);
+      createOverLayContent.appendChild(imgsContainer);
+
+      // ### here colse the popup box
+      createOverLayClose.onclick = () => {
+        createOverLayContainer.remove();
+        i = 0;
+      }
+
+      // ### here show img the popup box
+      createInstaBoxButton.onclick = () => {
+        document.body.appendChild(createOverLayContainer);
+      }
+    });
+
+
+
+  </script>
+  <!-- End js for Insta Images  -->
+
+  <!-- Start Contact -->
+  <div class="container my-5">
+    <div class=" rounded-3 m-3 py-5" style="background-color: var(--white-bg-contact-color);">
+      <!-- Start Main Special (CONTACTS) -->
+      <div id="main-special" class="text-center col-12">
+        <!-- head -->
+        <div id="head" class="d-inline-block p-1 px-3 rounded-5"
+          style="background-color: var(--dark-blue-opacity-color);">
+          <div class="sem-sem-button " style="font-size: 12px; font-weight: 900; color: var(--dark-blue-color);">
+            CONTACTS
+          </div>
+        </div>
+        <!-- cneter -->
+        <div id="center" class="position-relative">
+          <div class="center-bg-text">IN TOUCH</div>
+          <div class="position-absolute center-sm-text fw-bold">
+            Get It Touch Now
+          </div>
+        </div>
+        <!-- Down -->
+        <div id="down" style=" font-weight: 500;">
+          We have developed a unique space where you can work and create. We thought of everything to the smallest
+          detail. You will be able to conduct your business, conduct meetings, meetings.
+        </div>
+      </div>
+      <!-- End Main Special (CONTACTS) -->
+      <div class="container d-flex justify-content-center align-items-center" style="min-height: 45vh;">
+        <form action="#" class="d-flex justify-content-between align-items-center flex-column forms-contact  p-3"
+          style="min-height: 45vh;">
+          <!-- full name -->
+          <div class=" w-100 container-inputs">
+            <div class="my-2 d-flex position-relative input-box rounded-5" id="style-shadow">
+              <input type="text" class="form-control border-0 p-3 pe-5 rounded-5 shadow-none input-contact"
+                placeholder="First Name">
+              <img src="images/icon-person.png" class="position-absolute"
+                style="right: 10px; top: 50%; transform: translate(-50%,-50%);" alt="icon-person">
+            </div>
+            <div class="space-between-inputs"></div>
+            <div class="my-2 d-flex position-relative input-box rounded-5" id="style-shadow">
+              <input type="text" class="form-control border-0 p-3 pe-5 rounded-5 shadow-none input-contact"
+                placeholder="Last Name">
+              <img src="images/icon-person.png" class="position-absolute"
+                style="right: 10px; top: 50%; transform: translate(-50%,-50%);" alt="icon-person">
+            </div>
+          </div>
+          <!-- full contact -->
+          <div class=" w-100 container-inputs">
+            <div class="my-2 d-flex position-relative input-box rounded-5 " id="style-shadow">
+              <input type="text" class="form-control border-0 p-3 pe-5 rounded-5 shadow-none input-contact"
+                placeholder="Email Address">
+              <img src="images/icon-mail-contact.png" class="position-absolute"
+                style="right: 10px; top: 50%; transform: translate(-50%,-50%);" alt="icon-mail">
+            </div>
+            <div class="space-between-inputs"></div>
+
+            <div class="my-2 d-flex position-relative input-box rounded-5" id="style-shadow">
+              <input type="text" class="form-control border-0 p-3 pe-5 rounded-5 shadow-none input-contact"
+                placeholder="Phone Number">
+              <img src="images/icon-call-contact.png" class="position-absolute"
+                style="right: 10px; top: 50%; transform: translate(-50%,-50%);" alt="icon-call">
+            </div>
+          </div>
+          <!-- Messages -->
+          <div class=" w-100">
+            <div class="my-2 d-flex position-relative input-box rounded-5 input-box-msg" id="style-shadow">
+              <input type="text" class="form-control border-0 p-3 pe-5 rounded-5 shadow-none input-contact"
+                placeholder="Your Message">
+              <img src="images/icon-message.png" class="position-absolute"
+                style="right: 10px; top: 50%; transform: translate(-50%,-50%);" alt="icon-message">
+            </div>
+
+          </div>
+          <!-- Btn -->
+          <div>
+            <button class="btn border-0 btn-contact-form fw-bold text-white p-3 rounded-5"
+              style="background-color: var(--dark-blue-color);">Send Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- End Contact -->
+
+  <!-- Start Footer -->
+  <div>
+    <div class="my-5 border-top border-bottom" style="border-color: var(--white-border-footer-color);">
+      <!-- section One -->
+      <div class="container py-5 footer-section-one">
+        <div class="fw-bold fs-4" style="color: var(--blue-big-color);">Constructor</div>
+        <div class=" navbar-nav justify-content-between fw-bold footer-section-one-navbar"
+          style="min-height: 8vh; color: var(--blue-details-color); font-size: 13px;">
+          <div class="d-flex justify-content-between align-items-start ">
+            <li class="m-2">Home</li>
+            <li class="m-2">Gallery</li>
+            <li class="m-2">Services</li>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <li class="m-2">About</li>
+            <li class="m-2">Barbers</li>
+            <li class="m-2">Contacts</li>
+          </div>
+        </div>
+        <!-- Starts -->
+        <div class=" d-flex justify-content-between align-items-center flex-column" style="min-height: 8vh;">
+          <div class="d-flex justify-content-start align-items-start  w-100">
+            <img src="images/icon-stars.png" alt="">
+            <img src="images/icon-stars.png" alt="">
+            <img src="images/icon-stars.png" alt="">
+            <img src="images/icon-stars.png" alt="">
+            <img src="images/icon-stars.png" alt="">
+          </div>
+          <div class="d-flex align-items-center fw-bold" style="color: var(--blue-details-color)">
+            <div>
+              5.244 Satisfied Customers
+            </div>
+            <img class="ms-3" src="images/icon-footer-arrow-right.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- section Two -->
+    </div>
+    <div class=" fw-bold  " style="color: var(--blue-details-color)">
+      <div class="container footer-section-two py-3">
+        <div class="">© 2030 Comapny. All Rights Reserved.</div>
+        <div class="footer-section-two-words">
+          <div>Terms</div>
+          <div>Privacy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+</body>
+
+
+
+</html>
